@@ -21,14 +21,14 @@ plot.contract <- function(contract) {
 }
 
 is.suspicious <- function(contract) {
-  if (!any(is.na(contract)) & length(levels(contract$currency) == 1)) {
+  if (all(!is.na(contract))) {
     actual.order <- contract[order(contract$amount),'status']
     suspicious.order <- 1:nrow(contract)
-    statuses <- table(contract$status)
+    statuses <- as.numeric(table(contract$status))
     features <- c(low.bidders.rejected = all(actual.order == suspicious.order),
-                  n.awarded = statuses[[1]],
-                  n.evaluated = statuses[[2]],
-                  n.rejected = statuses[[3]])
+                  n.awarded = (statuses[1]),
+                  n.evaluated = (statuses[2]),
+                  n.rejected = (statuses[3]))
   } else {
     features <- c(low.bidders.rejected = FALSE,
                   n.awarded = 0,
@@ -41,6 +41,9 @@ is.suspicious <- function(contract) {
 }
 
 plot.suspiciousness <- function(contracts) {
+  for (column in paste0('n.',c('awarded','evaluated','rejected'))) {
+    contracts[,column] <- as.numeric(contracts[,column])
+  }
   ggplot(contracts) +
     aes(x = n.evaluated, y = n.rejected, label = contract.number) +
     xlab('How many bids were evaluated and not awarded?') +
@@ -64,10 +67,8 @@ main <- function() {
     dir.create('lowest-bidder')
   }
   contracts <- ddply(bids, 'contract', is.suspicious)
-  print('Plotting aggregate graph')
   ggsave(filename = 'evaluation-rejection.png', plot = plot.suspiciousness(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
-  print('Plotting contract-specific graphs')
   d_ply(bids, 'contract', plot.contract)
 }
 
