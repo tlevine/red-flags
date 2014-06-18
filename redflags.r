@@ -15,7 +15,8 @@ plot.contract <- function(contract) {
       theme(legend.position = 'top') +
       scale_fill_manual(values = c('#00FFFF', '#666666', '#FF0000')) +
       geom_bar(stat = 'identity') + geom_text(hjust = 0) + coord_flip()
-    ggsave(filename = paste0('lowest-bidder/', contract.number, '.png'), plot = p)
+    ggsave(filename = paste0('lowest-bidder/', contract.number, '.png'), plot = p,
+           width = 11, height = 8.5, units = 'in')
   }
 }
 
