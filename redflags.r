@@ -61,10 +61,10 @@ main <- function() {
   if (!file.exists('lowest-bidder')) {
     dir.create('lowest-bidder')
   }
-  d_ply(bids, 'contract', plot.contract)
   contracts <- ddply(bids, 'contract', is.suspicious)
   ggsave(filename = 'evaluation-rejection.png', plot = plot.contracts(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
+  d_ply(bids, 'contract', plot.contract)
 }
 
 # main()
