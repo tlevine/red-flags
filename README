@@ -1,1 +1,10 @@
-Quantify red flags of suspicious activities
+Quantify red flags of suspicious activities.
+
+Acquire `bids.csv` like so.
+
+    pip3 install wbcontractawards
+    wbcontractawards > bids.csv
+
+Then run `redflags` on it.
+
+    ./redflags bids.csv
