@@ -1,5 +1,17 @@
 Quantify red flags of suspicious activities.
 
+## What this does
+This looks for red flags of fraud and corruption in procurement
+for World Bank contracts. At present, the only one we're looking
+at is the rejection of low bidders.
+
+If you follow the directions below, you'll produce
+
+1. One plot of the number of rejections and evaluations-but-not-awards
+    for different contracts
+2. One plot per contract of the prices of the bids
+
+## How to use
 Acquire `bids.csv` like so.
 
     pip3 install wbcontractawards
@@ -20,3 +32,13 @@ Run `redflags` on it.
 
 This puts plots in the `lowest-bidder` directory, which I'm serving
 [here](http://big.dada.pink/red-flags/lowest-bidder/).
+
+## Next steps
+
+1. Convert all currencies to a standard currency.
+2. Improve the price parser
+    ([wbcontractawards](https://pypi.python.org/pypi/wbcontractawards)),
+    specifically for prices that are formatted
+    differently or written in other languages.
+    (It's worth looking a bit at the original C# scraper for inspiration.)
+3. Make the detection of low-bidder-rejection a bit less brittle.
