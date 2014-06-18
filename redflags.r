@@ -20,15 +20,29 @@ plot.contract <- function(contract) {
   }
 }
 
+is.suspicious <- function(contract) {
+  if (!any(is.na(contract)) & length(levels(contract$currency) == 1)) {
+    actual.order <- contract[order(contract$amount),'status']
+    suspicious.order <- 1:nrow(contract)
+    all(actual.order == suspicious.order)
+  }
+}
+
+load.bids.csv <- function(bids.csv) {
+  bids <- read.csv(bids.csv, colClasses = c('character', 'character', 'factor', 'numeric', 'character'))
+  bids$status <- factor(bids$status, levels = c('Awarded','Evaluated','Rejected'))
+  bids
+}
+
 main <- function() {
   argv <- commandArgs(trailingOnly = TRUE)
   bids.csv <- if (length(argv) == 0) 'bids.csv' else argv[1]
-  bids <- read.csv(bids.csv, colClasses = c('character', 'character', 'factor', 'numeric', 'character'))
-  bids$status <- factor(bids$status, levels = c('Awarded','Evaluated','Rejected'))
+  bids <- load.bids.csv(bids.csv)
   if (!file.exists('lowest-bidder')) {
     dir.create('lowest-bidder')
   }
-  d_ply(bids, 'contract', plot.contract)
+  d_ply(bids, 'contract', plot.contract, parallel = TRUE)
+  bids$is.suspicious <- daply(bids, 'contract', is.suspicious, parallel = TRUE)
 }
 
 main()
