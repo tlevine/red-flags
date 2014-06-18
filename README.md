@@ -17,3 +17,6 @@ Acquire `bids.csv` like so.
 Run `redflags` on it.
 
     ./redflags bids.csv
+
+This puts plots in the `lowest-bidder` directory, which I'm serving
+[here](http://big.dada.pink/red-flags/lowest-bidder/).
