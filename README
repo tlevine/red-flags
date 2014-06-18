@@ -7,7 +7,7 @@ Acquire `bids.csv` like so.
 
 `bids.csv` should look a bit like this.
 
-    contract,bidder,amount,currency
+    contract,bidder,status,amount,currency
     http://search.worldbank.org/wcontractawards/procdetails/OP00022874,Sinohydro Corporation Ltd.,Awarded,1998611755.0,KES
     http://search.worldbank.org/wcontractawards/procdetails/OP00025345,FIS-LG CNS Joint Venture,Awarded,9388888.0,USD
     http://search.worldbank.org/wcontractawards/procdetails/OP00027035,NATIONAL CONTRACTING COMPANY LTD,Awarded,106455.0,CHF
