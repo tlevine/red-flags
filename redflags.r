@@ -5,7 +5,7 @@ library(scales)
 
 plot.contract <- function(contract) {
   if (!any(is.na(contract))) {
-    contract$bidder <- factor(contract$bidder, levels = contract$bidder[order(contract$amount, decreasing = FALSE)])
+    contract$bidder <- factor(contract$bidder, levels = unique(contract$bidder[order(contract$amount, decreasing = FALSE)]))
     contract.url <- contract[1,'contract']
     contract.number <- contract[1,'contract.number']
     p <- ggplot(contract) +
@@ -35,7 +35,9 @@ is.suspicious <- function(contract) {
                   n.evaluated = 0,
                   n.rejected = 0)
   }
-  c(contract = contract[1,'contract'], features)
+  c(contract = contract[1,'contract'],
+    contract.number = contract[1,'contract.number'],
+    features)
 }
 
 plot.suspiciousness <- function(contracts) {
@@ -49,7 +51,7 @@ plot.suspiciousness <- function(contracts) {
 
 load.bids.csv <- function(bids.csv) {
   bids <- read.csv(bids.csv, colClasses = c('character', 'character', 'factor', 'numeric', 'character'))
-  bids$contract.number <- sub('.*/', '', contract.url)
+  bids$contract.number <- sub('.*/', '', bids$contract)
   bids$status <- factor(bids$status, levels = c('Awarded','Evaluated','Rejected'))
   bids
 }
@@ -62,8 +64,10 @@ main <- function() {
     dir.create('lowest-bidder')
   }
   contracts <- ddply(bids, 'contract', is.suspicious)
-  ggsave(filename = 'evaluation-rejection.png', plot = plot.contracts(contracts),
+  print('Plotting aggregate graph')
+  ggsave(filename = 'evaluation-rejection.png', plot = plot.suspiciousness(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
+  print('Plotting contract-specific graphs')
   d_ply(bids, 'contract', plot.contract)
 }
 
