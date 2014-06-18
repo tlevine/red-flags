@@ -7,7 +7,7 @@ plot.contract <- function(contract) {
   if (!any(is.na(contract))) {
     contract$bidder <- factor(contract$bidder, levels = contract$bidder[order(contract$amount, decreasing = FALSE)])
     contract.url <- contract[1,'contract']
-    contract.number <- sub('.*/', '', contract.url)
+    contract.number <- contract[1,'contract.number']
     p <- ggplot(contract) +
       aes(x = bidder, y = amount, label = currency, fill = status) +
       ggtitle(contract.url) + xlab('Name of bidder') +
@@ -38,8 +38,18 @@ is.suspicious <- function(contract) {
   c(contract = contract[1,'contract'], features)
 }
 
+plot.suspiciousness <- function(contracts) {
+  ggplot(contracts) +
+    aes(x = n.evaluated, y = n.rejected, label = contract.number) +
+    xlab('How many bids were evaluated and not awarded?') +
+    ylab('How many bids were rejected?') +
+    ggtitle('Evaluation and rejection of bids in World Bank contracts') +
+    geom_text()
+}
+
 load.bids.csv <- function(bids.csv) {
   bids <- read.csv(bids.csv, colClasses = c('character', 'character', 'factor', 'numeric', 'character'))
+  bids$contract.number <- sub('.*/', '', contract.url)
   bids$status <- factor(bids$status, levels = c('Awarded','Evaluated','Rejected'))
   bids
 }
@@ -52,7 +62,9 @@ main <- function() {
     dir.create('lowest-bidder')
   }
   d_ply(bids, 'contract', plot.contract)
-  bids$is.suspicious <- ddply(bids, 'contract', is.suspicious)
+  contracts <- ddply(bids, 'contract', is.suspicious)
+  ggsave(filename = 'evaluation-rejection.png', plot = plot.contracts(contracts),
+         width = 11, height = 8.5, units = 'in', dpi = 300)
 }
 
 # main()
