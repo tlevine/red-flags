@@ -24,8 +24,18 @@ is.suspicious <- function(contract) {
   if (!any(is.na(contract)) & length(levels(contract$currency) == 1)) {
     actual.order <- contract[order(contract$amount),'status']
     suspicious.order <- 1:nrow(contract)
-    all(actual.order == suspicious.order)
+    statuses <- table(contract$status)
+    features <- c(low.bidders.rejected = all(actual.order == suspicious.order),
+                  n.awarded = statuses[[1]],
+                  n.evaluated = statuses[[2]],
+                  n.rejected = statuses[[3]])
+  } else {
+    features <- c(low.bidders.rejected = FALSE,
+                  n.awarded = 0,
+                  n.evaluated = 0,
+                  n.rejected = 0)
   }
+  c(contract = contract[1,'contract'], features)
 }
 
 load.bids.csv <- function(bids.csv) {
@@ -41,8 +51,8 @@ main <- function() {
   if (!file.exists('lowest-bidder')) {
     dir.create('lowest-bidder')
   }
-  d_ply(bids, 'contract', plot.contract, parallel = TRUE)
-  bids$is.suspicious <- daply(bids, 'contract', is.suspicious, parallel = TRUE)
+  d_ply(bids, 'contract', plot.contract)
+  bids$is.suspicious <- ddply(bids, 'contract', is.suspicious)
 }
 
-main()
+# main()
