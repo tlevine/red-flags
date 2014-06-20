@@ -81,10 +81,10 @@ main <- function() {
     dir.create('lowest-bidder')
   }
   contracts <- ddply(bids, 'contract', is.lowest.bidder)
-  ggsave(filename = 'lowest-bidder.png', plot = plot.lowest.bidder(contracts),
+  ggsave(filename = 'big/lowest-bidder.png', plot = plot.lowest.bidder(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
   d_ply(bids, 'contract', plot.contract)
-  ggsave(filename = 'bid-patterns.png', plot = plot.bid.patterns(bids),
+  ggsave(filename = 'big/bid-patterns.png', plot = plot.bid.patterns(bids),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 }
 
