@@ -20,12 +20,12 @@ plot.contract <- function(contract) {
   }
 }
 
-is.suspicious <- function(contract) {
+is.lowest.bidder <- function(contract) {
   if (all(!is.na(contract))) {
     actual.order <- contract[order(contract$amount),'status']
-    suspicious.order <- 1:nrow(contract)
+    lowest.bidder.order <- 1:nrow(contract)
     statuses <- as.numeric(table(contract$status))
-    features <- c(low.bidders.rejected = all(actual.order == suspicious.order),
+    features <- c(low.bidders.rejected = all(actual.order == lowest.bidder.order),
                   n.awarded = (statuses[1]),
                   n.evaluated = (statuses[2]),
                   n.rejected = (statuses[3]))
@@ -40,7 +40,7 @@ is.suspicious <- function(contract) {
     features)
 }
 
-plot.suspiciousness <- function(contracts) {
+plot.lowest.bidder <- function(contracts) {
   for (column in paste0('n.',c('awarded','evaluated','rejected'))) {
     contracts[,column] <- as.numeric(contracts[,column])
   }
@@ -80,10 +80,12 @@ main <- function() {
   if (!file.exists('lowest-bidder')) {
     dir.create('lowest-bidder')
   }
-  contracts <- ddply(bids, 'contract', is.suspicious)
-  ggsave(filename = 'evaluation-rejection.png', plot = plot.suspiciousness(contracts),
+  contracts <- ddply(bids, 'contract', is.lowest.bidder)
+  ggsave(filename = 'lowest-bidder.png', plot = plot.lowest.bidder(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
   d_ply(bids, 'contract', plot.contract)
+  ggsave(filename = 'bid-patterns.png', plot = plot.bid.patterns(bids),
+         width = 11, height = 8.5, units = 'in', dpi = 300)
 }
 
-# main()
+main()
