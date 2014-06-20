@@ -9,12 +9,27 @@ in some way.
 * Lowest bidder not selected
 
 ### Unusual bid patterns
-According to "Most Common Red Flags of Fraud and Corruption
-in Procurement in Bank-financed Projects", (here on abbreviated
-"Common Red Flags"), by the Integrity Vice Presidency,
-unusual bid patterns are a sign of collusion.
+According to "[Most Common Red Flags of Fraud and Corruption in Procurement in Bank-financed Projects](http://siteresources.worldbank.org/EXTGOVANTICORR/Resources/3035863-1285875404494/100101_INT_Red_flags_pamphlet.pdf)",
+(here-on abbreviated "Common Red Flags"),
+by the Integrity Vice Presidency,
+unusual bid patterns are a sign of possible collusion.
 
+> In collusive bidding cases, it is not unusual for the designated winner to coordinate the bidding by the other participants -- dictating prices to be bid by others to ensure that the designated winner’s bid is the lowest.
 
+Collusive bidding can result in strange bidding patterns. Roundness of
+losing bid prices is one example.
+
+> Losing bid prices are round or unnatural numbers, e.g., 355,000 or 65,888,000 USD (check BER) 
+
+The present red flags detector looks at the number of bids and the number of
+round or unnatural numbers per bid. It produces
+[`bid-patterns.png`](http://big.dada.pink/red-flags/bid-patterns.png).
+
+Reading this graph, you can look for contracts with lots of round or unnatural
+bids. These contracts are probably totally fine, but they do raise this red flag,
+so it might be worth looking at them.
+
+### Lowest bidder non-selection
 If you follow the directions below, you'll produce
 
 1. One plot of the number of rejections and evaluations-but-not-awards
