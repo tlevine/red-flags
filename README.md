@@ -30,18 +30,28 @@ bids. These contracts are probably totally fine, but they do raise this red flag
 so it might be worth looking at them.
 
 ### Lowest bidder non-selection
-If you follow the directions below, you'll produce
+Sometimes, the "[l]owest evaluated bid is unjustifiably declared non-responsive",
+and this  "can indicate bid rigging", according to Common Red Flags.
+More specifically,
 
-1. One plot of the number of rejections and evaluations-but-not-awards
-    for different contracts
+> Project officials with a hidden interest in a contractor, or expecting to
+> receive kickbacks from a contractor (sometimes on behalf of other government
+> officials) often pressure Bid Evaluation Committee members to declare the
+> lowest evaluated bid(s) unresponsive, thereby allowing the award of the
+> contract to their preferred contractor, who often offers a much higher price
+> and/or is only marginally qualified.
 
+The present red flags detector looks at the prices of the various bids on
+contracts for bank-financed projects and looks for situations where low bids
+were rejected. You may read this as one plot per contract of the prices of the
+bids (They're [here](http://big.dada.pink/red-flags/lowest-bidder/).) or as
+a single [aggregate plot](http://big.dada.pink/red-flags/lowest-bidder.png)
+containing the number of rejections and evaluations-but-not-awards for
+different contracts.
 
-2. One plot per contract of the prices of the bids
-
-
-This puts plots in the `lowest-bidder` directory, which I'm serving
-[here](http://big.dada.pink/red-flags/lowest-bidder/).
-
+Contracts with lots of rejections or with rejections for low bidders show this
+red flag. Again, they are probably fine, but they might be a place to start
+looking for bid rigging.
 
 ## How to use
 Acquire `bids.csv` like so.
