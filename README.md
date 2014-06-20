@@ -2,14 +2,31 @@ Quantify red flags of suspicious activities.
 
 ## What this does
 This looks for red flags of fraud and corruption in procurement
-for World Bank contracts. At present, the only one we're looking
-at is the rejection of low bidders.
+for World Bank contracts. The following red flags are addressed
+in some way.
+
+* Unusual bid patterns
+* Lowest bidder not selected
+
+### Unusual bid patterns
+According to "Most Common Red Flags of Fraud and Corruption
+in Procurement in Bank-financed Projects", (here on abbreviated
+"Common Red Flags"), by the Integrity Vice Presidency,
+unusual bid patterns are a sign of collusion.
+
 
 If you follow the directions below, you'll produce
 
 1. One plot of the number of rejections and evaluations-but-not-awards
     for different contracts
+
+
 2. One plot per contract of the prices of the bids
+
+
+This puts plots in the `lowest-bidder` directory, which I'm serving
+[here](http://big.dada.pink/red-flags/lowest-bidder/).
+
 
 ## How to use
 Acquire `bids.csv` like so.
@@ -29,9 +46,6 @@ Acquire `bids.csv` like so.
 Run `redflags` on it.
 
     ./redflags bids.csv
-
-This puts plots in the `lowest-bidder` directory, which I'm serving
-[here](http://big.dada.pink/red-flags/lowest-bidder/).
 
 ## Next steps
 
