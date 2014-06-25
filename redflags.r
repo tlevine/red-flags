@@ -59,18 +59,30 @@ load.bids.csv <- function(bids.csv) {
   bids
 }
 
-plot.bid.patterns <- function(bids) {
+round.numbers <- function(bids) {
   bids$is.round <- bids$amount %% 1000 == 0
-  contracts <- ddply(bids, 'contract.number', function(df) {
+  main.currency <- names(sort(table(bids$currency), decreasing = TRUE)[1])
+  ddply(bids, 'contract.number', function(df) {
     c(round.bids = sum(df$is.round),
-      total.bids = nrow(df))
+      total.bids = nrow(df),
+      main.currency = main.currency)
   })
+}
+
+plot.bid.patters <- function(bids) {
+  contracts <- round.numbers(bids)
   ggplot(contracts) +
     aes(x = total.bids, y = round.bids, label = contract.number) +
     xlab('Total count of bids on the contract') +
     ylab('Count of bids that are multiples of a thousand (in original currency)') +
     ggtitle('Round or unnatural numbers in bid prices') +
     geom_text()
+}
+
+very.round <- function(bids) {
+  contracts <- round.numbers(bids)
+  contracts <- subset(contracts, (!is.na(round.bids)) & round.bids > total.bids / 2 & total.bids > 1)
+  contracts[order(contracts$round.bids, -contracts$total.bids, decreasing = TRUE),]
 }
 
 main <- function() {
@@ -88,4 +100,4 @@ main <- function() {
          width = 11, height = 8.5, units = 'in', dpi = 300)
 }
 
-main()
+# main()
