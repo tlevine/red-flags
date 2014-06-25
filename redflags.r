@@ -79,7 +79,7 @@ plot.bid.patterns <- function(bids) {
   ggplot(contracts) +
     aes(x = total.bids, y = round.bids, label = contract.number) +
     xlab('Total count of bids on the contract') +
-    ylab('Count of bids that are multiples of a thousand (in original currency)') +
+    ylab('Count of round bids (mostly trailing zeroes in the original currency)') +
     ggtitle('Round or unnatural numbers in bid prices') +
     geom_text()
 }
