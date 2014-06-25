@@ -59,10 +59,13 @@ load.bids.csv <- function(bids.csv) {
   bids
 }
 
+is.round <- function(amounts) {
+  modulus <- 10^(1 + floor(log10(amounts))/2)
+  amounts %% modulus == 0
+}
+
 round.numbers <- function(bids) {
-  modulus <- rep(1000, nrow(bids))
-  modulus[bids$currency == 'IDR'] <- 1000000
-  bids$is.round <- bids$amount %% modulus == 0
+  bids$is.round <- is.round(bids$amount)
   ddply(bids, 'contract.number', function(df) {
     main.currency <- names(sort(table(df$currency), decreasing = TRUE))[1]
     data.frame(round.bids = sum(df$is.round),
@@ -94,6 +97,9 @@ main <- function() {
   if (!file.exists('lowest-bidder')) {
     dir.create('lowest-bidder')
   }
+  roundness <- very.round(bids)
+  roundness$contract.url <- paste0('http://search.worldbank.org/wcontractawards/procdetails/', roundness$contract.number)
+  write.csv(roundness, 'roundness.csv', row.names = FALSE)
   contracts <- ddply(bids, 'contract', is.lowest.bidder)
   ggsave(filename = 'big/lowest-bidder.png', plot = plot.lowest.bidder(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
