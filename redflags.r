@@ -74,7 +74,7 @@ round.numbers <- function(bids) {
   })
 }
 
-plot.bid.patters <- function(bids) {
+plot.bid.patterns <- function(bids) {
   contracts <- round.numbers(bids)
   ggplot(contracts) +
     aes(x = total.bids, y = round.bids, label = contract.number) +
@@ -106,7 +106,7 @@ main <- function() {
   contracts <- ddply(bids, 'contract', is.lowest.bidder)
   ggsave(filename = 'big/lowest-bidder.png', plot = plot.lowest.bidder(contracts),
          width = 11, height = 8.5, units = 'in', dpi = 300)
-  d_ply(bids, 'contract', plot.contract)
+# d_ply(bids, 'contract', plot.contract)
   ggsave(filename = 'big/bid-patterns.png', plot = plot.bid.patterns(bids),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 }
