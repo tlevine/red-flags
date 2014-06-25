@@ -60,9 +60,11 @@ load.bids.csv <- function(bids.csv) {
 }
 
 round.numbers <- function(bids) {
-  bids$is.round <- bids$amount %% 1000 == 0
-  main.currency <- names(sort(table(bids$currency), decreasing = TRUE)[1])
+  modulus <- rep(1000, nrow(bids))
+  modulus[bids$currency == 'IDR'] <- 1000000
+  bids$is.round <- bids$amount %% modulus == 0
   ddply(bids, 'contract.number', function(df) {
+    main.currency <- names(sort(table(df$currency), decreasing = TRUE))[1]
     c(round.bids = sum(df$is.round),
       total.bids = nrow(df),
       main.currency = main.currency)
@@ -81,6 +83,7 @@ plot.bid.patters <- function(bids) {
 
 very.round <- function(bids) {
   contracts <- round.numbers(bids)
+  print(head(bids))
   contracts <- subset(contracts, (!is.na(round.bids)) & round.bids > total.bids / 2 & total.bids > 1)
   contracts[order(contracts$round.bids, -contracts$total.bids, decreasing = TRUE),]
 }
