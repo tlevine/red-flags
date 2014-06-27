@@ -1,6 +1,15 @@
-is.round <- function(amounts) {
-  modulus <- 10^(1 + floor(log10(amounts))/2)
-  amounts %% modulus == 0
+#' Determine whether a bid price (or any number) is "round".
+#'
+#' Unusually round bid prices raise suspicioun of bid rigging.
+#' This function tries to determine whether a bid price is
+#' round. A bid price is considered round if it has more trailing
+#' zeroes than other digits.
+#'
+#' @param number The number or numbers to test for roundness
+#' @return Whether the number is round
+is.round <- function(n) {
+  modulus <- 10^(1 + floor(log10(n))/2)
+  n %% modulus == 0
 }
 
 round.numbers <- function(bids) {
