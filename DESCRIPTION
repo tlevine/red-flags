@@ -1,0 +1,13 @@
+Package: redflags
+Title: Identify red flags of fraud and corruption in projects financed by the World Bank
+Description: The Integrity Vice Presidency of the World Bank
+    has a list of red flags of fraud and corruption in procurement
+    in bank-financed projects. These red flags are signs that
+    fraud and corruption might be happening and may thus be a
+    reason to conduct further investigation. The present package
+    represents these red flags quantitatively in order that we
+    may identify these red flags more systematically.
+Version: 0.1
+Author: Thomas Levine <_@thomaslevine.com>
+Maintainer: Thomas Levine <_@thomaslevine.com>
+License: AGPL
