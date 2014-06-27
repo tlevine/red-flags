@@ -68,7 +68,7 @@ round.numbers <- function(bids) {
   bids$is.round <- is.round(bids$amount)
   ddply(bids, 'contract.number', function(df) {
     main.currency <- names(sort(table(df$currency), decreasing = TRUE))[1]
-    data.frame(round.bids = sum(df$is.round),
+    data.frame(round.bids = sum(df$is.round, na.rm = TRUE),
                total.bids = nrow(df),
                main.currency = main.currency)
   })
