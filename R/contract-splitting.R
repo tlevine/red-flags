@@ -2,13 +2,18 @@
 #' below procurement thresholds, possibly to the same contractor.
 #' 
 library(plyr)
+library(moments)
 
 splitting <- function(contracts) {
   contracts$method.procurement <- factor(sub(' ?- ?[a-zA-Z].*', '', as.character(contracts$method.procurement)))
   contracts$method.selection <- factor(sub('.*([A-Z]{3,4}).*', '\\1', as.character(contracts$method.selection)))
   contracts$method.procurement 
 
-  d_ply(contracts, 'project', plot.project)
+  price.kurtosis <- ddply(contracts, c('project', 'price.currency'),
+    function(df) { c(kurtosis = kurtosis(df$price.amount, na.rm = TRUE)) })
+  price.kurtosis <- subset(price.kurtosis, !is.nan(kurtosis) & project != '')
+  price.kurtosis <- price.kurtosis[order(price.kurtosis$kurtosis, decreasing = TRUE),]
+# d_ply(contracts, 'project', plot.project)
 }
 
 plot.project <- function(project) {
