@@ -1,3 +1,5 @@
+#' Plot the prices of bids on a contract to check for suspicious bid-rejections.
+#'
 #' Make a plot in the style of Francis's conceptual drawing of the
 #' different bid prices for the purpose of finding suspicious
 #' rejections of low bidders.
