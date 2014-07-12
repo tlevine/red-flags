@@ -1,6 +1,5 @@
 #' Determine whether a bid price (or any number) is "round".
 #'
-#' Unusually round bid prices raise suspicioun of bid rigging.
 #' This function tries to determine whether a bid price is
 #' round. A bid price is considered round if it has more trailing
 #' zeroes than other digits.
@@ -12,6 +11,16 @@ is.round <- function(n) {
   n %% modulus == 0
 }
 
+#' Count round numbers in bid prices.
+#'
+#' Unusually round bid prices raise suspicioun of bid rigging.
+#' Given a data frame of bids, this function counts how many of
+#' those bids are round. It also counts the total number of
+#' bids and checks which currency is most common for the bids.
+#' The currency information is mainly helpful for debugging.
+#'
+#' @param bids Data frame of bids, with the columns "currency" and "contract.number"
+#' @return Data frame of contracts, with the columns "round.bids", "total.bids", and "main.currency".
 round.numbers <- function(bids) {
   bids$is.round <- is.round(bids$amount)
   ddply(bids, 'contract.number', function(df) {
