@@ -1,3 +1,10 @@
+#' Make a plot in the style of Francis's conceptual drawing of the
+#' different bid prices for the purpose of finding suspicious
+#' rejections of low bidders.
+#'
+#' This function takes a data frame containing the bids for a
+#' single contract. If the contract isn't missing data, return
+#' a ggplot2 plot.
 plot.contract <- function(contract) {
   if (!any(is.na(contract))) {
     contract$bidder <- factor(contract$bidder, levels = unique(contract$bidder[order(contract$amount, decreasing = FALSE)]))
