@@ -2,9 +2,8 @@
 #' different bid prices for the purpose of finding suspicious
 #' rejections of low bidders.
 #'
-#' This function takes a data frame containing the bids for a
-#' single contract. If the contract isn't missing data, return
-#' a ggplot2 plot.
+#' @param contract A data frame containing the bids for a single contract.
+#' @return A ggplot2 plot, or NULL (if the contract is missing data)
 plot.contract <- function(contract) {
   if (!any(is.na(contract))) {
     contract$bidder <- factor(contract$bidder, levels = unique(contract$bidder[order(contract$amount, decreasing = FALSE)]))
