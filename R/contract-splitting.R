@@ -4,25 +4,38 @@
 library(plyr)
 library(moments)
 
+#' Run the contract-splitting detector.
 splitting <- function(contracts) {
   contracts$method.procurement <- factor(sub(' ?- ?[a-zA-Z].*', '', as.character(contracts$method.procurement)))
   contracts$method.selection <- factor(sub('.*([A-Z]{3,4}).*', '\\1', as.character(contracts$method.selection)))
   contracts$method.procurement 
-
-# d_ply(contracts, 'project', plot.project)
 }
 
-project.kurtosis <- function(df) {c(
-  kurtosis = kurtosis(df$price.amount, na.rm = TRUE),
-  n.contracts = nrow(df)
-)}
-
-price.kurtosis <- function(contracts) {
-  df <- ddply(contracts, c('project', 'price.currency'), project.kurtosis)
-  df <- subset(df, !is.nan(kurtosis) & project != '')
-  df <- df[order(df$kurtosis, decreasing = TRUE),]
+#' Within a particular data frame, produce a price.standardized
+#' column as the standardized price.amount column. Ignore NAs.
+standardize.prices <- function(df) {
+  .mean <- mean(df$price.amount, na.rm = TRUE)
+  .sd <- sd(df$price.amount, na.rm = TRUE)
+  df$price.standardized <- (df$price.amount - .mean) / .sd
   df
 }
+
+strange.prices <- function(contracts) {
+  df <- ddply(contracts, c('project', 'price.currency'), standardize.prices)
+  df <- subset(df, !is.na(price.standardized) & project != '')
+  that.population <- df$price.standardized
+  ddply(df, 'project', function(df) {
+    this.population <- df$price.standardized
+    c(D = unname(ks.test(this.population, that.population)$statistic))
+  }
+  df <- df[order(df$D, decreasing = TRUE),]
+  df
+}
+
+#' This isn't used in the detector, but you can use it like so.
+#' 
+#'   d_ply(contracts, 'project', plot.project)
+#'
 plot.project <- function(project) {
   project.name <- project[1,'project']
   p <- ggplot(project) +
