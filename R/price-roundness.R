@@ -31,6 +31,14 @@ round.numbers <- function(bids) {
   })
 }
 
+#' Plot round numbers in bid prices.
+#'
+#' Unusually round bid prices raise suspicioun of bid rigging.
+#' Given a data frame of bids, this function plots the number of
+#' round bids and the number of total bids for each contract.
+#'
+#' @param bids Data frame of bids, with the columns "currency" and "contract.number"
+#' @return A ggplot plot
 plot.bid.patterns <- function(bids) {
   contracts <- round.numbers(bids)
   ggplot(contracts) +
@@ -41,6 +49,17 @@ plot.bid.patterns <- function(bids) {
     geom_text()
 }
 
+#' Find suspicious roundness patterns in contracts.
+#'
+#' Unusually round bid prices raise suspicioun of bid rigging.
+#' Given a data frame of bids, this function counts how many of
+#' those bids are round. It also counts the total number of
+#' bids and checks which currency is most common for the bids.
+#' (That is, it calls `round.numbers`.) Then it selects contracts
+#' with unusually high degrees of roundness.
+#'
+#' @param bids Data frame of bids, with the columns "currency" and "contract.number"
+#' @return Data frame of contracts, with the columns "round.bids", "total.bids", and "main.currency"
 very.round <- function(bids) {
   contracts <- round.numbers(bids)
   contracts <- subset(contracts, (!is.na(round.bids)) & round.bids > total.bids / 2 & total.bids > 1)
