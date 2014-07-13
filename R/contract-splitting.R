@@ -4,11 +4,14 @@
 library(plyr)
 library(moments)
 
-#' Run the contract-splitting detector.
-splitting <- function(contracts) {
+#' Standardize the names of the procurement and selection methods
+#'
+#' @param contracts a data frame with method.procurement and method.selection columns
+#' @return the data frame with standardized method.procurement and method.selection columns
+standardize.methods <- function(contracts) {
   contracts$method.procurement <- factor(sub(' ?- ?[a-zA-Z].*', '', as.character(contracts$method.procurement)))
   contracts$method.selection <- factor(sub('.*([A-Z]{3,4}).*', '\\1', as.character(contracts$method.selection)))
-  contracts$method.procurement 
+  contracts
 }
 
 #' Within a particular data frame, produce a price.standardized
@@ -45,7 +48,3 @@ plot.project <- function(project) {
     ggtitle(project.name)
   ggsave(filename = paste0('outputs/splitting/', project.name, '.png'), plot = p)
 }
-
-# sqldf('select project, contracts.contract, bids.amount from bids join contracts on bids.contract = contracts.contract where project = "P079344"')
-# P079344<-subset(contracts, project == 'P079344' & (method.selection != '' | method.procurement != ''))
-
