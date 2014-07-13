@@ -23,6 +23,13 @@ standardize.prices <- function(df) {
   df
 }
 
+#' Detect strange prices
+#'
+#' Use Pearson kurtosis and Kolmogorov-Smirnov statistics to
+#' look for unusual patterns in contract prices, by project.
+#'
+#' @param contracts a data frame with contract-level data
+#' @return a data frame of project-level data with the newly computed statistics
 strange.prices <- function(contracts) {
   df <- ddply(contracts, c('project', 'price.currency'), standardize.prices)
   df <- subset(df, !is.na(price.standardized) & project != '')
@@ -32,7 +39,7 @@ strange.prices <- function(contracts) {
     c(ks.D = unname(ks.test(this.population, that.population)$statistic),
       kurt = kurtosis(df$price.standardized))
   }
-  df <- df[order(df$D, decreasing = TRUE),]
+  df <- df[order(df$ks.D, decreasing = TRUE),]
   df
 }
 
