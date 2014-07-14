@@ -6,6 +6,7 @@
 #'
 #' @param contract A data frame containing the bids for a single contract.
 #' @return A ggplot2 plot, or NULL (if the contract is missing data)
+#' @export
 plot.contract <- function(contract) {
   if (!any(is.na(contract))) {
     contract$bidder <- factor(contract$bidder, levels = unique(contract$bidder[order(contract$amount, decreasing = FALSE)]))
@@ -23,6 +24,12 @@ plot.contract <- function(contract) {
   }
 }
 
+
+#' Run the lowest bidder non-selection detector
+#'
+#' @param contract A data frame of bids on one contract
+#' @return A vector with the contract and statistics about bid selections
+#' @export
 lowest.bidder <- function(contract) {
   if (all(!is.na(contract))) {
     actual.order <- contract[order(contract$amount),'status']
@@ -43,6 +50,11 @@ lowest.bidder <- function(contract) {
     features)
 }
 
+#' Draw a plot about bid selections with a focus on detection low bidder non-selection
+#'
+#' @param contracts A data frame of contracts
+#' @return A ggplot2 plot
+#' @export
 plot.lowest.bidder <- function(contracts) {
   for (column in paste0('n.',c('awarded','evaluated','rejected'))) {
     contracts[,column] <- as.numeric(contracts[,column])

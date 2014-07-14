@@ -39,6 +39,7 @@ round.numbers <- function(bids) {
 #'
 #' @param bids Data frame of bids, with the columns "currency" and "contract.number"
 #' @return A ggplot plot
+#' @export
 plot.bid.patterns <- function(bids) {
   contracts <- round.numbers(bids)
   ggplot(contracts) +
@@ -60,6 +61,7 @@ plot.bid.patterns <- function(bids) {
 #'
 #' @param bids Data frame of bids, with the columns "currency" and "contract.number"
 #' @return Data frame of contracts, with the columns "round.bids", "total.bids", and "main.currency"
+#' @export
 very.round <- function(bids) {
   contracts <- round.numbers(bids)
   contracts <- subset(contracts, (!is.na(round.bids)) & round.bids > total.bids / 2 & total.bids > 1)

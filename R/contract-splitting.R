@@ -27,6 +27,7 @@ standardize.prices <- function(df) {
 #'
 #' @param contracts a data frame with contract-level data
 #' @return a data frame of project-level data with the newly computed statistics
+#' @export
 strange.prices <- function(contracts) {
   df <- ddply(contracts, c('project', 'price.currency'), standardize.prices)
   df <- subset(df, !is.na(price.standardized) & project != '')
@@ -49,6 +50,7 @@ strange.prices <- function(contracts) {
 #' @param project Data frame of contract-level data for one project
 #' @param dir The directory in which to save the plot.
 #' @return NULL
+#' @export
 plot.project <- function(project, dir = 'outputs/splitting/') {
   project.name <- project[1,'project']
   p <- ggplot(project) +
