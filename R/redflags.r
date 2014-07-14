@@ -18,6 +18,8 @@ main <- function() {
   write.csv(
     contracts.lb[order(-as.numeric(contracts.lb$n.rejected), as.numeric(contracts.lb$n.evaluated)),][1:20,],
     'rejections.csv', row.names = FALSE)
-  ggsave(filename = 'big/lowest-bidder.png', plot = plot.lowest.bidder(contracts.lb),
+  ggsave(filename = 'lowest-bidder.png', plot = plot.lowest.bidder(contracts.lb),
          width = 11, height = 8.5, units = 'in', dpi = 300)
+
+  # 
 }
