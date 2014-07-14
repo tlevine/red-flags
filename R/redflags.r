@@ -21,5 +21,8 @@ main <- function() {
   ggsave(filename = 'lowest-bidder.png', plot = plot.lowest.bidder(contracts.lb),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 
-  # 
+  # Contract pricing and generally strange price distributions
+  projects.prices <- strange.prices(contracts)
+  write.csv(projects.prices, 'project-prices.csv', row.names = FALSE)
+  # ggsave ...
 }
