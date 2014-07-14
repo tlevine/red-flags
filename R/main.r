@@ -1,11 +1,10 @@
-#!/usr/bin/env Rscript
 library(plyr)
 library(ggplot2)
 library(scales)
 
 main <- function() {
-  bids <- load.bids.csv()
-  contracts <- load.contracts.csv()
+  bids <- data(bids)
+  contracts <- data(contracts)
 
   # Roundness
   roundness <- very.round(bids)
