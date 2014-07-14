@@ -36,7 +36,7 @@ strange.prices <- function(contracts) {
     this.population <- df$price.standardized
     c(ks.D = unname(ks.test(this.population, that.population)$statistic),
       kurt = kurtosis(df$price.standardized))
-  }
+  })
   df <- df[order(df$ks.D, decreasing = TRUE),]
   df
 }
