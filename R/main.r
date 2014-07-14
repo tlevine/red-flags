@@ -10,7 +10,7 @@ main <- function() {
   # Roundness
   roundness <- very.round(bids)
   write.csv(roundness, 'roundness.csv', row.names = FALSE)
-  ggsave(filename = 'bid-patterns.png', plot = plot.bid.patterns(bids),
+  ggsave(filename = 'bid-patterns.pdf', plot = plot.bid.patterns(bids),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 
   # Lowest bidder not selected
@@ -18,7 +18,7 @@ main <- function() {
   write.csv(
     contracts.lb[order(-as.numeric(contracts.lb$n.rejected), as.numeric(contracts.lb$n.evaluated)),][1:20,],
     'rejections.csv', row.names = FALSE)
-  ggsave(filename = 'lowest-bidder.png', plot = plot.lowest.bidder(contracts.lb),
+  ggsave(filename = 'lowest-bidder.pdf', plot = plot.lowest.bidder(contracts.lb),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 
   # Contract pricing and generally strange price distributions
