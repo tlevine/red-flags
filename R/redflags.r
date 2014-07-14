@@ -13,12 +13,11 @@ main <- function() {
   ggsave(filename = 'bid-patterns.png', plot = plot.bid.patterns(bids),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 
-
-
-  contracts <- ddply(bids, 'contract', is.lowest.bidder)
+  # Lowest bidder not selected
+  contracts.lb <- ddply(bids, 'contract', lowest.bidder)
   write.csv(
-    contracts[order(-as.numeric(contracts$n.rejected), as.numeric(contracts$n.evaluated)),][1:20,],
+    contracts.lb[order(-as.numeric(contracts.lb$n.rejected), as.numeric(contracts.lb$n.evaluated)),][1:20,],
     'rejections.csv', row.names = FALSE)
-  ggsave(filename = 'big/lowest-bidder.png', plot = plot.lowest.bidder(contracts),
+  ggsave(filename = 'big/lowest-bidder.png', plot = plot.lowest.bidder(contracts.lb),
          width = 11, height = 8.5, units = 'in', dpi = 300)
 }

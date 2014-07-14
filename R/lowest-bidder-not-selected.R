@@ -23,7 +23,7 @@ plot.contract <- function(contract) {
   }
 }
 
-is.lowest.bidder <- function(contract) {
+lowest.bidder <- function(contract) {
   if (all(!is.na(contract))) {
     actual.order <- contract[order(contract$amount),'status']
     lowest.bidder.order <- 1:nrow(contract)
@@ -54,4 +54,3 @@ plot.lowest.bidder <- function(contracts) {
     ggtitle('Evaluation and rejection of bids in World Bank contracts') +
     geom_text()
 }
-
