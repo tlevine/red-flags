@@ -1,4 +1,7 @@
-main <- function() {
+#' Summarize the analysis that Tom did June/July 2014
+#'
+#' @export
+detect <- function() {
   bids <- data(bids)
   contracts <- data(contracts)
 
