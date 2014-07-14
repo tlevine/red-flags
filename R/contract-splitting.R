@@ -1,8 +1,5 @@
 #' Look for contract splitting, that is, repeated awards
 #' below procurement thresholds, possibly to the same contractor.
-#' 
-library(plyr)
-library(moments)
 
 #' Standardize the names of the procurement and selection methods
 #'

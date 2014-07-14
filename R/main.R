@@ -1,7 +1,3 @@
-library(plyr)
-library(ggplot2)
-library(scales)
-
 main <- function() {
   bids <- data(bids)
   contracts <- data(contracts)
