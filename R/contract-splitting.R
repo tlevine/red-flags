@@ -29,16 +29,16 @@ standardize.prices <- function(df) {
 #' @return a data frame of project-level data with the newly computed statistics
 #' @export
 strange.prices <- function(contracts) {
-  df <- ddply(contracts, c('project', 'price.currency'), standardize.prices)
-  df <- subset(df, !is.na(price.standardized) & project != '')
-  that.population <- df$price.standardized
-  ddply(df, 'project', function(df) {
+  contract.currencies <- ddply(contracts, c('project', 'price.currency'), standardize.prices)
+  contract.currencies <- subset(contract.currencies, !is.na(price.standardized) & project != '')
+  that.population <- contract.currencies$price.standardized
+  projects <- ddply(contract.currencies, 'project', function(df) {
     this.population <- df$price.standardized
     c(ks.D = unname(ks.test(this.population, that.population)$statistic),
       kurt = kurtosis(df$price.standardized))
   })
-  df <- df[order(df$ks.D, decreasing = TRUE),]
-  df
+  projects <- projects[order(projects$ks.D, decreasing = TRUE),]
+  projects
 }
 
 #' Plot a histogram of prices for a project.
