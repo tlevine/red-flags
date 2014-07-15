@@ -2,7 +2,7 @@
 #'
 #' @name redflags
 #' @docType package
-#' @import plyr, moments, ggplot2, scales
+#' @import plyr moments ggplot2 scales
 NULL
 
 #' Contracts for projects financed by the World Bank
