@@ -66,6 +66,6 @@ plot.bid.patterns <- function(bids) {
 very.round <- function(bids) {
   contracts <- round.numbers(bids)
   contracts <- subset(contracts, (!is.na(round.bids)) & round.bids > total.bids / 2 & total.bids > 1)
-  contracts$contract.url <- paste0('http://search.worldbank.org/wcontractawards/procdetails/', roundness$contract.number)
+  contracts$contract.url <- paste0('http://search.worldbank.org/wcontractawards/procdetails/', contracts$contract.number)
   contracts[order(contracts$round.bids, -contracts$total.bids, decreasing = TRUE),]
 }
