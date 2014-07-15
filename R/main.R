@@ -40,8 +40,8 @@ NULL
 #'
 #' @export
 detect <- function() {
-  bids <- data(bids)
-  contracts <- data(contracts)
+  data(bids)
+  data(contracts)
 
   # Roundness
   roundness <- very.round(bids)

@@ -23,7 +23,6 @@ is.round <- function(n) {
 #' @param bids Data frame of bids, with the columns "currency" and "contract.number"
 #' @return Data frame of contracts, with the columns "round.bids", "total.bids", and "main.currency".
 round.numbers <- function(bids) {
-  print(bids$amount)
   bids$is.round <- is.round(bids$amount)
   ddply(bids, 'contract.number', function(df) {
     main.currency <- names(sort(table(df$currency), decreasing = TRUE))[1]
