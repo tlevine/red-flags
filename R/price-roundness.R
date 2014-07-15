@@ -6,6 +6,7 @@
 #'
 #' @param number The number or numbers to test for roundness
 #' @return Whether the number is round
+#' @export
 is.round <- function(n) {
   modulus <- 10^(1 + floor(log10(n))/2)
   n %% modulus == 0
