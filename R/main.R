@@ -59,6 +59,9 @@ detect <- function() {
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
-  write.csv(projects.prices, 'project-prices.csv', row.names = FALSE)
+  projects.prices.ksD      <- projects.prices[order(projects.prices$ks.D, decreasing = TRUE),][1:15,]
+  projects.prices.kurtosis <- projects.prices[order(projects.prices$kurt, decreasing = TRUE),][1:15,]
+  write.csv(projects.prices.ksD, 'project-prices-ksD.csv', row.names = FALSE)
+  write.csv(projects.prices.kurtosis, 'project-prices-kurtosis.csv', row.names = FALSE)
   # ggsave ...
 }
