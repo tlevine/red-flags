@@ -74,6 +74,8 @@ Run `redflags` on it.
 
 ## Next steps
 
+Ideas from 2014
+
 1. Convert all currencies to a standard currency.
 2. Improve the price parser
     ([wbcontractawards](https://pypi.python.org/pypi/wbcontractawards)),
@@ -81,3 +83,10 @@ Run `redflags` on it.
     differently or written in other languages.
     (It's worth looking a bit at the original C# scraper for inspiration.)
 3. Make the detection of low-bidder-rejection a bit less brittle.
+
+Ideas from 2015
+
+* Compare projects that Tom found to projects the other guy found.
+    (There are a few projects that one of us found and the other didn't.)
+* Run this on new data.
+* Make a new detector.
