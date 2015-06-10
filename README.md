@@ -54,23 +54,21 @@ red flag. Again, they are probably fine, but they might be a place to start
 looking for bid rigging.
 
 ## How to use
-Acquire `bids.csv` like so.
+Acquire data like so.
 
     pip3 install wbcontractawards
-    wbcontractawards > bids.csv
+    wbcontractawards bids > csv-data/bids.csv
+    wbcontractawards contracts > csv-data/contracts.csv
+    cd csv-data
+    Rscript update.r
+    cd ..
 
-`bids.csv` should look a bit like this.
+Now you can install the package and run it.
 
-    contract,bidder,status,amount,currency
-    http://search.worldbank.org/wcontractawards/procdetails/OP00022874,Sinohydro Corporation Ltd.,Awarded,1998611755.0,KES
-    http://search.worldbank.org/wcontractawards/procdetails/OP00025345,FIS-LG CNS Joint Venture,Awarded,9388888.0,USD
-    http://search.worldbank.org/wcontractawards/procdetails/OP00027035,NATIONAL CONTRACTING COMPANY LTD,Awarded,106455.0,CHF
-    http://search.worldbank.org/wcontractawards/procdetails/OP00027035,China CAMC Engineering & Shanghai Electric Power Construction,Evaluated,344574544.0,KES
-    ...
+    R CMD INSTALL .
+    R -e 'library(redflags); detect()'
 
-Run `redflags` on it.
-
-    ./redflags bids.csv
+A few files will be produced in the present directory as output.
 
 ## Next steps
 
