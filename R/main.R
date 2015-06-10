@@ -41,6 +41,7 @@ NULL
 #' @export
 detect <- function() {
   data(bids)
+  names(bids)[6:8] <- sub('opening.', '', names(bids)[6:8])
   data(contracts)
 
   # Roundness
