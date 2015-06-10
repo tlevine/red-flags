@@ -9,11 +9,11 @@
 #' @export
 plot.contract <- function(contract) {
   if (!any(is.na(contract))) {
-    contract$bidder <- factor(contract$bidder, levels = unique(contract$bidder[order(contract$price.amount, decreasing = FALSE)]))
+    contract$bidder <- factor(contract$bidder, levels = unique(contract$bidder[order(contract$opening.price.amount, decreasing = FALSE)]))
     contract.url <- contract[1,'contract']
     contract.number <- contract[1,'contract.number']
     p <- ggplot(contract) +
-      aes(x = bidder, y = price.amount, label = currency, fill = status) +
+      aes(x = bidder, y = opening.price.amount, label = currency, fill = status) +
       ggtitle(contract.url) + xlab('Name of bidder') +
       scale_y_continuous('Amount bid (in the labeled currency)', labels = comma) +
       theme(legend.position = 'top') +
@@ -32,7 +32,7 @@ plot.contract <- function(contract) {
 #' @export
 lowest.bidder <- function(contract) {
   if (all(!is.na(contract))) {
-    actual.order <- contract[order(contract$price.amount),'status']
+    actual.order <- contract[order(contract$opening.price.amount),'status']
     lowest.bidder.order <- 1:nrow(contract)
     statuses <- as.numeric(table(contract$status))
     features <- c(low.bidders.rejected = all(actual.order == lowest.bidder.order),
