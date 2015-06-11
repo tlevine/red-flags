@@ -46,22 +46,22 @@ detect <- function() {
   # Roundness
   bids.roundness <- roundness(bids)[c('country', 'contract', 'round.bids', 'total.bids')]
   o <- order(bids.roundness$country, -(bids.roundness$round.bids/bids.roundness$total.bids))
-  write.csv(bids.roundness[o,], 'bids-roundness.csv', row.names = FALSE)
+  write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
   contracts.rejections <- ddply(bids, 'contract', lowest.bidder)
-  write.csv(contracts.lb[c('country', 'contract', 'n.evaluated', 'n.rejected')]
-            'contracts-rejections.csv', row.names = FALSE)
+  write.csv(contracts.rejections[c('country', 'contract', 'n.evaluated', 'n.rejected')],
+            'outputs/contracts-rejections.csv', row.names = FALSE)
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
   projects.countries <- sqldf('select project, country from bids group by project')
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
   projects.merged <- projects[order(projects$country, -projects$kurt),]
-  write.csv(projects.merged, 'project-prices.csv', row.names = FALSE)
+  write.csv(projects.merged, 'outputs/project-prices.csv', row.names = FALSE)
 }
 
-# ggsave(filename = 'bid-patterns.pdf', plot = plot.bid.patterns(bids),
+# ggsave(filename = 'outputs/bid-patterns.pdf', plot = plot.bid.patterns(bids),
 #        width = 11, height = 8.5, units = 'in', dpi = 300)
-# ggsave(filename = 'lowest-bidder.pdf', plot = plot.lowest.bidder(contracts.lb),
+# ggsave(filename = 'outputs/lowest-bidder.pdf', plot = plot.lowest.bidder(contracts.rejections),
 #        width = 11, height = 8.5, units = 'in', dpi = 300)
