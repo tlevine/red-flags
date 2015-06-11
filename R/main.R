@@ -45,7 +45,9 @@ detect <- function() {
 
   # Roundness
   bids.roundness <- roundness(bids)[c('country', 'contract', 'round.bids', 'total.bids')]
-  o <- order(bids.roundness$country, -(bids.roundness$round.bids/bids.roundness$total.bids))
+  o <- order(bids.roundness$country == '',
+             bids.roundness$country,
+             -(bids.roundness$round.bids/bids.roundness$total.bids))
   write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
