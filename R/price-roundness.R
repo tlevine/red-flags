@@ -61,11 +61,9 @@ plot.bid.patterns <- function(bids) {
 #' with unusually high degrees of roundness.
 #'
 #' @param bids Data frame of bids, with the columns "currency" and "contract.number"
-#' @return Data frame of contracts, with the columns "round.bids", "total.bids", and "main.currency"
+#' @return Data frame of bids containing only the bids for which bid prices were identified and containing new "round.bids" and "total.bids" columns for the counts of round bids and of total bids
 #' @export
-very.round <- function(bids) {
-  contracts <- round.numbers(bids)
-  contracts <- subset(contracts, (!is.na(round.bids)) & round.bids > total.bids / 2 & total.bids > 1)
-  contracts$contract.url <- paste0('http://search.worldbank.org/wcontractawards/procdetails/', contracts$contract.number)
-  contracts[order(contracts$round.bids, -contracts$total.bids, decreasing = TRUE),]
+roundness <- function(bids) {
+  contracts <- subset(round.numbers(bids),!is.na(round.bids) & total.bids > 1)
+  merge(bids, contracts[c('contract.number', 'round.bids', 'total.bids')]
 }
