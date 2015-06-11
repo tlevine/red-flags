@@ -44,15 +44,14 @@ detect <- function() {
   data(contracts)
 
   # Roundness
-  bids.roundness <- roundness(bids)
-  bids.roundness <- ddply(bids, 'country', roundness)[c('contract', 'round.bids', 'total.bids')]
-  write.csv(bids.roundness, 'roundness.csv', row.names = FALSE)
+  bids.roundness <- roundness(bids)[c('country', 'contract', 'round.bids', 'total.bids')]
+  o <- order(bids.roundness$country, -(bids.roundness$round.bids/bids.roundness$total.bids))
+  write.csv(bids.roundness[o,], 'bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
-  contracts.rejections <- ddply(bids, 'country',
-                                function(df) ddply(df, 'contract', lowest.bidder))
-  write.csv(contracts.lb[c('contract', 'n.evaluated', 'n.rejected')]
-            'rejections.csv', row.names = FALSE)
+  contracts.rejections <- ddply(bids, 'contract', lowest.bidder)
+  write.csv(contracts.lb[c('country', 'contract', 'n.evaluated', 'n.rejected')]
+            'contracts-rejections.csv', row.names = FALSE)
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
