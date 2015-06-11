@@ -14,6 +14,7 @@ Maintainer: Thomas Levine <_@thomaslevine.com>
 License: AGPL
 URL: https://github.com/tlevine/red-flags
 Imports:
+    sqldf,
     plyr,
     moments,
     ggplot2,
