@@ -59,7 +59,9 @@ detect <- function() {
 
   # Lowest bidder not selected
   contracts.countries <- sqldf('select "contract.number", country from bids group by "contract.number"')
-  contracts.rejections <- merge(ddply(bids, 'contract', lowest.bidder), contracts.countries, all.x = TRUE)
+  contracts.rejections <- subset(merge(ddply(bids, 'contract', lowest.bidder),
+                                       contracts.countries, all.x = TRUE),
+                                 n.rejected > 0)
   o <- order(contracts.rejections$country == '',
              contracts.rejections$country,
              -contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
