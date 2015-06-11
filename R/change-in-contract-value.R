@@ -26,5 +26,5 @@
 change.in.contract.value <- function(bids) {
   bids <- subset(bids, !is.na(contract.price.amount))
   bids$price.ratio <- bids$contract.price.amount / bids$evaluated.price.amount
-  bids
+  subset(bids, price.ratio > 1)
 }

@@ -46,8 +46,9 @@ detect <- function() {
   bids.valuechange <- change.in.contract.value(bids)
   o <- order(is.na(bids.valuechange$country) | bids.valuechange$country == '',
              bids.valuechange$country,
-             bids.valuechange$price.ratio)
-  write.csv(bids.valuechange[o,], 'outputs/bids-valuechange.csv', row.names = FALSE)
+             -bids.valuechange$price.ratio)
+  write.csv(bids.valuechange[o,c('country', 'contract', 'price.ratio')],
+            'outputs/bids-valuechange.csv', row.names = FALSE)
 
   # Roundness
   bids.roundness <- roundness(bids)[c('country', 'contract', 'round.bids', 'total.bids')]
