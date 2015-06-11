@@ -54,7 +54,7 @@ detect <- function() {
   contracts.countries <- sqldf('select contract_number as contract, country from bids group by contract_number')
   contracts.rejections <- merge(ddply(bids, 'contract', lowest.bidder), contracts.countries, all.x = TRUE)
   o <- order(contracts.rejections$country == '',
-             contracts.rejections$n.rejected / n.evaluated)
+             contracts.rejections$n.rejected / contract.rejections$n.evaluated)
   contracts.rejections <- contracts.rejections[o,]
   write.csv(contracts.rejections[c('country', 'contract', 'n.evaluated', 'n.rejected')],
             'outputs/contracts-rejections.csv', row.names = FALSE)
