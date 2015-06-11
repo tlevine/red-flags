@@ -55,11 +55,10 @@ detect <- function() {
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
-  projects.prices.ksD      <- projects.prices[order(projects.prices$ks.D, decreasing = TRUE),][1:15,]
-  projects.prices.kurtosis <- projects.prices[order(projects.prices$kurt, decreasing = TRUE),][1:15,]
-  write.csv(projects.prices.ksD, 'project-prices-ksD.csv', row.names = FALSE)
-  write.csv(projects.prices.kurtosis, 'project-prices-kurtosis.csv', row.names = FALSE)
-  # ggsave ...
+  projects.countries <- sqldf('select project, country from bids group by project')
+  projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
+  projects.merged <- projects[order(projects$country, -projects$kurt),]
+  write.csv(projects.merged, 'project-prices.csv', row.names = FALSE)
 }
 
 # ggsave(filename = 'bid-patterns.pdf', plot = plot.bid.patterns(bids),
