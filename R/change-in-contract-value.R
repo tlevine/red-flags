@@ -18,12 +18,13 @@
 #'
 #' @param bids Data frame of bids, with the columns "contract.price.amount"
 #'   and "evaluated.price.amount"
-#' @return Data frame of bids ordered by the ratio between the two prices
+#' @return Data frame of winning bids with a new "price.ratio" column containing the ratio between the two prices
 #' @examples
 #'   data(bids)
-#'   change.in.contract.value(bids)[1:20,] # Twenty biggest increases
+#'   change.in.contract.value(bids)
 #' @export
 change.in.contract.value <- function(bids) {
-  price.ratio <- bids$contract.price.amount / bids$evaluated.price.amount
-  bids[order(price.ratio, decreasing = TRUE),]
+  bids <- subset(bids, !is.na(contract.price.amount))
+  bids$price.ratio <- bids$contract.price.amount / bids$evaluated.price.amount
+  bids
 }

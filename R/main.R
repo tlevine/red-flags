@@ -43,6 +43,12 @@ detect <- function() {
   data(bids)
   data(contracts)
 
+  bids.valuechange <- change.in.contract.value(bids)
+  o <- order(is.na(bids.valuechange$country) | bids.valuechange$country == '',
+             bids.valuechange$country,
+             bids.valuechange$price.ratio)
+  write.csv(bids.valuechange[o,], 'outputs/bids-valuechange.csv', row.names = FALSE)
+
   # Roundness
   bids.roundness <- roundness(bids)[c('country', 'contract', 'round.bids', 'total.bids')]
   o <- order(bids.roundness$country == '',
@@ -51,12 +57,12 @@ detect <- function() {
   write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
-  contracts.countries <- sqldf('select contract_number as contract, country from bids group by contract_number')
+  contracts.countries <- sqldf("select contract_number as 'contract.number', country from bids group by contract_number")
   contracts.rejections <- merge(ddply(bids, 'contract', lowest.bidder), contracts.countries, all.x = TRUE)
-  o <- order(is.na(contracts.rejections$country),
-             contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
-  contracts.rejections <- contracts.rejections[o,]
-  write.csv(contracts.rejections[c('country', 'contract', 'n.evaluated', 'n.rejected')],
+  o <- order(contracts.rejections$country == '',
+             contracts.rejections$country,
+             -contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
+  write.csv(contracts.rejections[o, c('country', 'contract', 'n.evaluated', 'n.rejected')],
             'outputs/contracts-rejections.csv', row.names = FALSE)
 
   # Contract pricing and generally strange price distributions
@@ -65,9 +71,8 @@ detect <- function() {
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
   o <- order(is.na(projects.merged$country) | projects.merged$country == '',
              projects.merged$country,
-             -projects.merged$kurt),
-  projects.merged <- projects.merged[o]
-  write.csv(projects.merged[c('country', 'project', 'ks.D', 'kurt')],
+             -projects.merged$kurt)
+  write.csv(projects.merged[o, c('country', 'project', 'ks.D', 'kurt')],
             'outputs/project-prices.csv', row.names = FALSE)
 }
 
