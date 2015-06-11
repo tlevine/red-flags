@@ -53,8 +53,8 @@ detect <- function() {
   # Lowest bidder not selected
   contracts.countries <- sqldf('select contract_number as contract, country from bids group by contract_number')
   contracts.rejections <- merge(ddply(bids, 'contract', lowest.bidder), contracts.countries, all.x = TRUE)
-  o <- order(contracts.rejections$country == '',
-             contracts.rejections$n.rejected / contract.rejections$n.evaluated)
+  o <- order(is.na(contracts.rejections$country),
+             contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
   contracts.rejections <- contracts.rejections[o,]
   write.csv(contracts.rejections[c('country', 'contract', 'n.evaluated', 'n.rejected')],
             'outputs/contracts-rejections.csv', row.names = FALSE)
@@ -63,8 +63,12 @@ detect <- function() {
   projects.prices <- strange.prices(contracts)
   projects.countries <- sqldf('select project, country from bids group by project')
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
-  projects.merged <- projects[order(projects$country, -projects$kurt),]
-  write.csv(projects.merged, 'outputs/project-prices.csv', row.names = FALSE)
+  o <- order(is.na(projects.merged$country) | projects.merged$country == '',
+             projects.merged$country,
+             -projects.merged$kurt),
+  projects.merged <- projects.merged[o]
+  write.csv(projects.merged[c('country', 'project', 'ks.D', 'kurt')],
+            'outputs/project-prices.csv', row.names = FALSE)
 }
 
 # ggsave(filename = 'outputs/bid-patterns.pdf', plot = plot.bid.patterns(bids),

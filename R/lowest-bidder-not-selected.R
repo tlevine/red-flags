@@ -35,19 +35,20 @@ lowest.bidder <- function(contract) {
     actual.order <- contract[order(contract$opening.price.amount),'status']
     lowest.bidder.order <- 1:nrow(contract)
     statuses <- as.numeric(table(contract$status))
-    features <- c(low.bidders.rejected = all(actual.order == lowest.bidder.order),
-                  n.awarded = (statuses[1]),
-                  n.evaluated = (statuses[2]),
-                  n.rejected = (statuses[3]))
+    features <- data.frame(low.bidders.rejected = all(actual.order == lowest.bidder.order),
+                           n.awarded = (statuses[1]),
+                           n.evaluated = (statuses[2]),
+                           n.rejected = (statuses[3]))
   } else {
-    features <- c(low.bidders.rejected = FALSE,
-                  n.awarded = 0,
-                  n.evaluated = 0,
-                  n.rejected = 0)
+    features <- data.frame(low.bidders.rejected = FALSE,
+                           n.awarded = 0,
+                           n.evaluated = 0,
+                           n.rejected = 0)
   }
-  c(contract = contract[1,'contract'],
-    contract.number = contract[1,'contract.number'],
-    features)
+  data.frame(contract = contract[1,'contract'],
+             contract.number = contract[1,'contract.number'],
+             features)
+             
 }
 
 #' Draw a plot about bid selections with a focus on detection low bidder non-selection
