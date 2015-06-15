@@ -58,7 +58,7 @@ detect <- function() {
   write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
-  contracts.countries <- sqldf('select "contract.number", country from bids group by "contract.number"')
+  contracts.countries <- sqldf('select contract_number AS \'contract.number\', country from bids group by contract_number')
   contracts.rejections <- subset(merge(ddply(bids, 'contract', lowest.bidder),
                                        contracts.countries, all.x = TRUE),
                                  n.rejected > 0)
