@@ -1,5 +1,6 @@
 load.contracts.csv <- function(fn = 'contracts.csv') {
-  read.csv(fn, colClasses = c('factor','character','character','character','numeric','factor','numeric'))
+  cl <- c('factor','character','factor', 'character','character','numeric','factor','numeric')
+  read.csv(fn, colClasses = cl)
 }
 
 load.bids.csv <- function(fn = 'bids.csv') {
