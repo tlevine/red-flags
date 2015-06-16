@@ -52,8 +52,9 @@ detect <- function() {
             'outputs/bids-valuechange.csv', row.names = FALSE)
 
   # Roundness
+  cols <- c('contract.country', 'contract', 'round.bids', 'total.bids')
   bids.roundness <- merge(roundness(bids)[c('contract', 'round.bids', 'total.bids')],
-                          contracts[c('contract', 'contract.country')])
+                          contracts[c('contract', 'contract.country')])[cols]
   o <- order(bids.roundness$contract.country == '',
              bids.roundness$contract.country,
              -(bids.roundness$round.bids/bids.roundness$total.bids))
