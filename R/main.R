@@ -53,8 +53,7 @@ detect <- function() {
 
   # Roundness
   cols <- c('contract.country', 'contract', 'round.bids', 'total.bids')
-  bids.roundness <- merge(roundness(bids)[c('contract', 'round.bids', 'total.bids')],
-                          contracts[c('contract', 'contract.country')])[cols]
+  bids.roundness <- roundness(bids)[cols]
   o <- order(bids.roundness$contract.country == '',
              bids.roundness$contract.country,
              -(bids.roundness$round.bids/bids.roundness$total.bids))
@@ -73,7 +72,6 @@ detect <- function() {
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
-  projects.countries <- sqldf('select project, [contract.country] from contracts group by project')
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
   o <- order(is.na(projects.merged$contract.country) | projects.merged$contract.country == '',
              projects.merged$contract.country,
