@@ -53,7 +53,7 @@ detect <- function() {
 
   # Roundness
   cols <- c('contract.country', 'contract', 'round.bids', 'total.bids')
-  bids.roundness <- roundness(bids)[cols]
+  bids.roundness <- roundness(contracts, bids)[cols]
   o <- order(bids.roundness$contract.country == '',
              bids.roundness$contract.country,
              -(bids.roundness$round.bids/bids.roundness$total.bids))
