@@ -1,4 +1,4 @@
-project,contract,bidder.name,status,country,opening.price.currency,opening.price.amount,opening.price.raw,evaluated.price.currency,evaluated.price.amount,evaluated.price.raw,contract.price.currency,contract.price.amount,contract.price.raw
+project,contract,bidder.name,status,bidder.country,opening.price.currency,opening.price.amount,opening.price.raw,evaluated.price.currency,evaluated.price.amount,evaluated.price.raw,contract.price.currency,contract.price.amount,contract.price.raw
 P127759,http://search.worldbank.org/wcontractawards/procdetails/OP00029774,Energatsantsshin OJSC,Awarded,Armenia,USD,653690.0,"USD 653,690.00",AMD,267254619.0,"AMD267,254,619.60",AMD,267254619.0,"AMD267,254,619.60"
 P127759,http://search.worldbank.org/wcontractawards/procdetails/OP00029774,Energouchet PJSC,Evaluated,Ukraine,USD,662500.0,"USD 662,500.00",AMD,270856500.0,"AMD270,856,500.00",,,
 P127759,http://search.worldbank.org/wcontractawards/procdetails/OP00029774,JV of AGMIN ITALY S.r.l. and NESA S.r.l.,Evaluated,Italy,EUR,539364.0,"EUR 539,364.87",AMD,285545155.0,"AMD285,545,155.83",,,
@@ -12024,7 +12024,7 @@ P079935,http://search.worldbank.org/wcontractawards/procdetails/OP00016141,Vicen
 P079935,http://search.worldbank.org/wcontractawards/procdetails/OP00016141,Hebei Road and Bridge Group Co. Ltd.,Rejected,,PHP,684729834.0,"PHP 684,729,834.75",,,,,,
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00006632,VISVAKAM SAMNANGCONSTRUCTION CO.,Awarded,,USD,1566915.0,"USD 1,566,915.26;",USD,1566915.0,"USD  1,566,915.26",USD,1566915.0,"USD  1,566,915.26"
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00006634,VISVAKAM SAMNANGCONSTRUCTION CO.,Awarded,,USD,1651977.0,"USD 1,651,977.23;",USD,1651977.0,"USD  1,651,977.23",USD,1651977.0,"USD  1,651,977.23"
-P116774,http://search.worldbank.org/wcontractawards/procdetails/OP00007268,Inel doo,Awarded,,,,,,,BAM,,,BAM
+P116774,http://search.worldbank.org/wcontractawards/procdetails/OP00007268,Sanam Styrka,Awarded,,,,,,,BAM,,,BAM
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025426,,Awarded,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025426,,Evaluated,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025426,,Rejected,,,,,,,,,,
@@ -12033,14 +12033,14 @@ P116774,http://search.worldbank.org/wcontractawards/procdetails/OP00007268,Inel 
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025427,,Rejected,,,,,,,,,,
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00006632,VISVAKAM SAMNANGCONSTRUCTION CO.,Awarded,,USD,1566915.0,"USD 1,566,915.26;",USD,1566915.0,"USD  1,566,915.26",USD,1566915.0,"USD  1,566,915.26"
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00006634,VISVAKAM SAMNANGCONSTRUCTION CO.,Awarded,,USD,1651977.0,"USD 1,651,977.23;",USD,1651977.0,"USD  1,651,977.23",USD,1651977.0,"USD  1,651,977.23"
-P116774,http://search.worldbank.org/wcontractawards/procdetails/OP00007268,Inel doo,Awarded,,,,,,,BAM,,,BAM
+P116774,http://search.worldbank.org/wcontractawards/procdetails/OP00007268,Sanam Styrka,Awarded,,,,,,,BAM,,,BAM
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025426,,Awarded,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025426,,Evaluated,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025426,,Rejected,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025427,,Awarded,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025427,,Evaluated,,,,,,,,,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00025427,,Rejected,,,,,,,,,,
-P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006075,Consortium PZPZajecar AD,Awarded,,RSD,486092410.0,"RSD 486,092,410.26;",,,RSD,,,RSD
+P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006075,OSIJEK-KOTEKS,Awarded,,RSD,559745669.0,"RSD 559,745,669.10;",,,RSD,,,RSD
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006075,PZP BEOGRAD,Evaluated,,RSD,609190350.0,"RSD 609,190,350.23;",,,,,,
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006078,Consortium PZPZAJECAR AD,Awarded,,RSD,426742674.0,"RSD 426,742,674.13;",,,RSD,,,RSD
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006078,JV PZP BOGRAD AD &PZP,Evaluated,,RSD,619839394.0,"RSD 619,839,394.23;",,,RSD,,,
@@ -12051,9 +12051,9 @@ P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006517,PZP B
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006517,Osijek-Koteksd.d.,Evaluated,,RSD,424605011.0,"RSD 424,605,011.46;",,,,,,
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006517,Consortium,Evaluated,,,,RSD,,,RSD,,,
 P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00006729,Unialati,Awarded,,,,,,,EUR,EUR,239133.0,"EUR  239,133.00"
-P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007056,Pelsys,Awarded,,HRK,107900.0,"HRK 107,900.00;",,,EUR,,,EUR
+P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007056,ECCOS,Awarded,,HRK,107900.0,"HRK 107,900.00;",,,EUR,,,EUR
 P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007057,Cussons,Awarded,,GBP,54460.0,"GBP 54,460.00;",,,,,,EUR
-P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006075,Consortium PZPZajecar AD,Awarded,,RSD,486092410.0,"RSD 486,092,410.26;",,,RSD,,,RSD
+P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006075,OSIJEK-KOTEKS,Awarded,,RSD,559745669.0,"RSD 559,745,669.10;",,,RSD,,,RSD
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006075,PZP BEOGRAD,Evaluated,,RSD,609190350.0,"RSD 609,190,350.23;",,,,,,
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006078,Consortium PZPZAJECAR AD,Awarded,,RSD,426742674.0,"RSD 426,742,674.13;",,,RSD,,,RSD
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006078,JV PZP BOGRAD AD &PZP,Evaluated,,RSD,619839394.0,"RSD 619,839,394.23;",,,RSD,,,
@@ -12064,7 +12064,7 @@ P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006517,PZP B
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006517,Osijek-Koteksd.d.,Evaluated,,RSD,424605011.0,"RSD 424,605,011.46;",,,,,,
 P075207,http://search.worldbank.org/wcontractawards/procdetails/OP00006517,Consortium,Evaluated,,,,RSD,,,RSD,,,
 P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00006729,Unialati,Awarded,,,,,,,EUR,EUR,239133.0,"EUR  239,133.00"
-P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007056,Pelsys,Awarded,,HRK,107900.0,"HRK 107,900.00;",,,EUR,,,EUR
+P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007056,ECCOS,Awarded,,HRK,107900.0,"HRK 107,900.00;",,,EUR,,,EUR
 P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007057,Cussons,Awarded,,GBP,54460.0,"GBP 54,460.00;",,,,,,EUR
 P080258,http://search.worldbank.org/wcontractawards/procdetails/OP00007058,Koncar,Awarded,,,,HRK,,,EUR,EUR,87719.0,"EUR  87,719.09"
 P071250,http://search.worldbank.org/wcontractawards/procdetails/OP00028761,M/s Indian Hume Pipe Co. Ltd.,Awarded,India,INR,1811395626.0,"INR 1,811,395,626.92",INR,1811395626.0,"INR1,811,395,626.92",INR,1811395626.0,"INR1,811,395,626.92"
@@ -12201,7 +12201,7 @@ P107473,http://search.worldbank.org/wcontractawards/procdetails/OP00018986,OSMAN
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00027622,DHI,Evaluated,,,,,CNY,7449300.0,"CNY7,449,300.00",,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00027622,Shanghai Urban Construction Design and Research Institute,Evaluated,,,,,CNY,6669146.0,"CNY6,669,146.51",,,
 ,http://search.worldbank.org/wcontractawards/procdetails/OP00027622,,Rejected,,,,,,,,,,
-P115953,http://search.worldbank.org/wcontractawards/procdetails/OP00007347,Ahmadbek Ltd,Awarded,,TJS,886000.0,"TJS 886,000.00;",,,,,,USD
+P115953,http://search.worldbank.org/wcontractawards/procdetails/OP00007347,Ahmadbek Ltd,Awarded,,TJS,935460.0,"TJS 935,460.00;",,,,,,USD
 P100081,http://search.worldbank.org/wcontractawards/procdetails/OP00008149,Daomany ConstructionCo Ltd,Awarded,,LAK,4000514000.0,"LAK 4,000,514,000.00;",USD,480557.0,"USD480,557.00",USD,480557.0,"USD480,557.00"
 P100081,http://search.worldbank.org/wcontractawards/procdetails/OP00008149,VisoudaConstruction Co Ltd,Evaluated,,LAK,4155425000.0,"LAK 4,155,425,000.00;",USD,514604.0,"USD514,604.00",,,
 P100081,http://search.worldbank.org/wcontractawards/procdetails/OP00008149,VongkhantyConstruction Co Ltd,Rejected,,LAK,3626711022.0,"LAK 3,626,711,022.00;",,,,,,
@@ -12997,7 +12997,7 @@ P106172,http://search.worldbank.org/wcontractawards/procdetails/OP00017060,JV of
 P106172,http://search.worldbank.org/wcontractawards/procdetails/OP00017067,JV of MBH Power/Shirdi Sai/Shreem,Awarded,,USD,4122704.0,"USD 4,122,704.60",USD,4122704.0,"USD4,122,704.60",USD,4122704.0,"USD4,122,704.60"
 P106172,http://search.worldbank.org/wcontractawards/procdetails/OP00017063,News Engineering Nigeria Limited,Awarded,,USD,10488834.0,"USD 10,488,834.00",USD,9926282.0,"USD9,926,282.00",USD,9926282.0,"USD9,926,282.00"
 P106172,http://search.worldbank.org/wcontractawards/procdetails/OP00017061,JV of MBH Power/Shirdi Sai/Shreem,Awarded,,USD,8906247.0,"USD 8,906,247.23",USD,8749045.0,"USD8,749,045.08",USD,8749045.0,"USD8,749,045.08"
-P073311,http://search.worldbank.org/wcontractawards/procdetails/OP00005798,Comin Khmere,Awarded,,USD,1340330.0,"USD 1,340,330.00;",,,,,,USD
+P073311,http://search.worldbank.org/wcontractawards/procdetails/OP00005798,A WEE TRADING,Awarded,,EUR,1034169.0,"EUR 1,034,169.30;",,,,,,USD
 P073311,http://search.worldbank.org/wcontractawards/procdetails/OP00005798,"H S R CO.,",Evaluated,,USD,1442000.0,"USD 1,442,000.00;",,,,,,
 P073311,http://search.worldbank.org/wcontractawards/procdetails/OP00005798,Nary Chhean,Evaluated,,USD,1493550.0,"USD 1,493,550.00;",,,USD,,,
 P073311,http://search.worldbank.org/wcontractawards/procdetails/OP00005798,George Fischer,Evaluated,,,,USD,,,USD,,,
@@ -13033,7 +13033,7 @@ P083702,http://search.worldbank.org/wcontractawards/procdetails/OP00027114,BDO L
 P083702,http://search.worldbank.org/wcontractawards/procdetails/OP00027114,KPMG ?udit Ltd,Evaluated,Ukraine,USD,60000.0,"USD 60,000.00",UAH,479580.0,"UAH479,580.00",,,
 P083702,http://search.worldbank.org/wcontractawards/procdetails/OP00027114,Ernst & Young ?udytorski Poslugy Ltd,Evaluated,Ukraine,USD,88000.0,"USD 88,000.00",UAH,703384.0,"UAH703,384.00",,,
 P083702,http://search.worldbank.org/wcontractawards/procdetails/OP00027114,Deloitte &Touche USC PJSC,Evaluated,Ukraine,UAH,1039090.0,"UAH 1,039,090.00",UAH,1039090.0,"UAH1,039,090.00",,,
-P101928,http://search.worldbank.org/wcontractawards/procdetails/OP00006777,Tunach,Awarded,,KZT,81084820.0,"KZT 81,084,820.00;",,,,,,KZT
+P101928,http://search.worldbank.org/wcontractawards/procdetails/OP00006777,Dar-Stroi,Awarded,,KZT,81084820.0,"KZT 81,084,820.00;",,,,,,KZT
 P078389,http://search.worldbank.org/wcontractawards/procdetails/OP00007192,The Aeronav,Awarded,,USD,3495932.0,"USD 3,495,932.00;",,,USD,,,USD
 P078389,http://search.worldbank.org/wcontractawards/procdetails/OP00007192,AME Air TrafficManagement,Evaluated,,USD,4641956.0,"USD 4,641,956.88;",,,USD,,,
 P103633,http://search.worldbank.org/wcontractawards/procdetails/OP00006737,M/s China CivilEngineering,Awarded,,,,TZS,,,TZS,,,TZS
@@ -13056,12 +13056,12 @@ P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00024068,Lanit
 P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00024068,OTR 2000,Evaluated,Russian Federation,USD,5320963.0,"USD 5,320,963.46",RUB,166428030.0,"RUB166,428,030.91",,,
 P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00024068,CROC incorporated,Rejected,Russian Federation,USD,4471957.0,"USD 4,471,957.78",,,,,,
 P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00024068,TechnoServ A/S,Rejected,Russian Federation,USD,3385679.0,"USD 3,385,679.12",,,,,,
-P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006273,Koncar-InzeneringZanergetiku i,Awarded,,EUR,283772.0,"EUR 283,772.08;",,,EUR,,,EUR
+P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006273,Survalent,Awarded,,EUR,283772.0,"EUR 283,772.08;",,,EUR,,,EUR
 P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006273,ABB Ltd. ZagrebCroatia,Evaluated,,EUR,374684.0,"EUR 374,684.00;",,,,,,
 P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006273,AREVA T&DProtection and,Evaluated,,EUR,598206.0,"EUR 598,206.87;",,,EUR,,,
 P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006343,Consortium ABBd.o.o. Zagreb and,Awarded,,,,CHF,EUR,2643679.0,"EUR  2,643,679.94",EUR,2643679.0,"EUR  2,643,679.94"
-P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006343,KONCAR -INZENERINGZA ENERGETIKU,Evaluated,,EUR,741000.0,"EUR 741,000.00;",,,EUR,,,
-P077675,http://search.worldbank.org/wcontractawards/procdetails/OP00006861,Joint Venture -,Awarded,,EUR,2368295.0,"EUR 2,368,295.28;",,,RSD,,,RSD
+P082337,http://search.worldbank.org/wcontractawards/procdetails/OP00006343,KONCAR -INZENERINGZA ENERGETIKU,Evaluated,,EUR,2262253.0,"EUR 2,262,253.36;  MKD 18,533,986.18;",,,EUR,,,
+P077675,http://search.worldbank.org/wcontractawards/procdetails/OP00006861,Joint Venture -,Awarded,,EUR,1926982.0,"EUR 1,926,982.39;",,,RSD,,,RSD
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Prodit Engineering S.P.A,Awarded,Italy,EUR,565176.0,"EUR 565,176.56",JOD,592129.0,"JOD592,129.524",JOD,52345.0,"JOD52,345.57"
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Aklouk Bros Co.,Evaluated,Jordan,USD,314120.0,"USD 314,120.63",JOD,263072.0,"JOD263,072.44",,,
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,ALfatih for Industrial Tools,Evaluated,Jordan,JOD,456276.0,"JOD 456,276.50",JOD,456276.0,"JOD456,276.50",,,
@@ -13072,7 +13072,7 @@ P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Inter
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,AL-ghanem Trading &Contracting,Rejected,Jordan,JOD,369680.0,"JOD 369,680.00",,,,,,
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Hananina Technical Metal Work,Rejected,Jordan,,,,,,,,,
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021729,New Tronic srl,Awarded,Italy,EUR,665025.0,"EUR 665,025.00",JOD,617170.0,"JOD617,170.165",JOD,558428.0,"JOD558,428.099"
-P077675,http://search.worldbank.org/wcontractawards/procdetails/OP00006861,Joint Venture -,Awarded,,EUR,2368295.0,"EUR 2,368,295.28;",,,RSD,,,RSD
+P077675,http://search.worldbank.org/wcontractawards/procdetails/OP00006861,Joint Venture -,Awarded,,EUR,1926982.0,"EUR 1,926,982.39;",,,RSD,,,RSD
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Prodit Engineering S.P.A,Awarded,Italy,EUR,565176.0,"EUR 565,176.56",JOD,592129.0,"JOD592,129.524",JOD,52345.0,"JOD52,345.57"
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Aklouk Bros Co.,Evaluated,Jordan,USD,314120.0,"USD 314,120.63",JOD,263072.0,"JOD263,072.44",,,
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,ALfatih for Industrial Tools,Evaluated,Jordan,JOD,456276.0,"JOD 456,276.50",JOD,456276.0,"JOD456,276.50",,,
@@ -13083,16 +13083,16 @@ P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Inter
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,AL-ghanem Trading &Contracting,Rejected,Jordan,JOD,369680.0,"JOD 369,680.00",,,,,,
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021732,Hananina Technical Metal Work,Rejected,Jordan,,,,,,,,,
 P105036,http://search.worldbank.org/wcontractawards/procdetails/OP00021729,New Tronic srl,Awarded,Italy,EUR,665025.0,"EUR 665,025.00",JOD,617170.0,"JOD617,170.165",JOD,558428.0,"JOD558,428.099"
-P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007116,International,Awarded,,,,USD,,,,,,USD
+P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007116,Central,Awarded,,,,USD,,,,,,USD
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007119,Communications,Awarded,,USD,257493.0,"USD 257,493.00;",,,USD,USD,177619.0,"USD  177,619.00"
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007119,Unicon,Evaluated,,USD,617376.0,"USD 617,376.00;",,,USD,,,
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007119,Marson,Evaluated,,USD,316100.0,"USD 316,100.00;",,,USD,,,
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007118,Communications,Awarded,,,,USD,,,USD,USD,177619.0,"USD  177,619.00"
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007118,,Evaluated,,,,USD,,,USD,,,
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007118,Marson,Evaluated,,USD,316100.0,"USD 316,100.00;",,,USD,,,
-P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007120,International,Awarded,,USD,534897.0,"USD 534,897.00;",,,,,,USD
+P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007120,Com In.,Awarded,,,,EUR,,,,,,USD
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007368,Com. int.,Awarded,,,,USD,USD,134720.0,"USD  134,720.00",USD,134720.0,"USD  134,720.00"
-P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007365,Saahib,Awarded,,UGX,165192494.0,"UGX 165,192,494.00;",,,USD,USD,94719.0,"USD  94,719.00"
+P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007365,Saahib,Awarded,,UGX,292914.0,"UGX 292,914.00;",,,USD,USD,94719.0,"USD  94,719.00"
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007372,Intercross,Awarded,,USD,133247.0,"USD 133,247.34;",,,USD,USD,88144.0,"USD  88,144.00"
 P069208,http://search.worldbank.org/wcontractawards/procdetails/OP00007372,Saahib,Evaluated,,UGX,137382678.0,"UGX 137,382,678.00;",,,,,,
 P085376,http://search.worldbank.org/wcontractawards/procdetails/OP00009782,China National Scientific Instruments & Materials Corp./ Lenovo (Beijing) Co. Ltd. Joint Venture,Awarded,,CNY,13639169.0,"CNY 13,639,169.00",CNY,13639169.0,"CNY13,639,169.00",CNY,13127084.0,"CNY13,127,084.00"
@@ -13133,7 +13133,7 @@ P083353,http://search.worldbank.org/wcontractawards/procdetails/OP00007037,Integ
 P083353,http://search.worldbank.org/wcontractawards/procdetails/OP00007037,Inkoprom,Evaluated,,BAM,2498560.0,"BAM 2,498,560.19;",,,BAM,,,
 P083353,http://search.worldbank.org/wcontractawards/procdetails/OP00007037,Pfeiffer,Evaluated,,,,,,,,,,
 P083353,http://search.worldbank.org/wcontractawards/procdetails/OP00007037,JV Vranica BL-Hidrokop,Evaluated,,,,BAM,,,BAM,,,
-P115486,http://search.worldbank.org/wcontractawards/procdetails/OP00006711,Unit Export Limited(UK),Awarded,,EUR,168000.0,"EUR 168,000.00;",,,,,,EUR
+P115486,http://search.worldbank.org/wcontractawards/procdetails/OP00006711,JV ShanghaiPrimehonor Trading,Awarded,,EUR,310880.0,"EUR 310,880.68;",,,,,,EUR
 P096234,http://search.worldbank.org/wcontractawards/procdetails/OP00024861,MAANI & PARTNERS FURNITURE CO/AL-AARAF INTL FOR TRADING & CONTRACTS,Awarded,Jordan,USD,1912500.0,"USD 1,912,500.00",USD,1912500.0,"USD1,912,500.00",USD,1912500.0,"USD1,912,500.00"
 P096234,http://search.worldbank.org/wcontractawards/procdetails/OP00024861,Soor Dubai Company for General contracting Lim.,Evaluated,United Arab Emirates,USD,2730000.0,"USD 2,730,000.00",USD,2730000.0,"USD2,730,000.00",,,
 P096234,http://search.worldbank.org/wcontractawards/procdetails/OP00024861,Al-Sadoun furniture Co. Ltd,Rejected,Iraq,USD,1105000.0,"USD 1,105,000.00",,,,,,
@@ -13373,7 +13373,7 @@ P106855,http://search.worldbank.org/wcontractawards/procdetails/OP00022063,Pitam
 P106855,http://search.worldbank.org/wcontractawards/procdetails/OP00022104,Ruwi Modern Printers LLC Oman,Awarded,Oman,USD,783332.0,"USD 783,332.55",USD,783332.0,"USD783,332.55",USD,783332.0,"USD783,332.55"
 P106855,http://search.worldbank.org/wcontractawards/procdetails/OP00022102,Ruwi Modern Printers LLC Oman,Awarded,Oman,USD,1349998.0,"USD 1,349,998.65",USD,1349998.0,"USD1,349,998.65",USD,1349998.0,"USD1,349,998.65"
 P095250,http://search.worldbank.org/wcontractawards/procdetails/OP00006602,Materna GmbH &Conseil,Awarded,,USD,1265000.0,"USD 1,265,000.00;",,,USD,,,USD
-P095250,http://search.worldbank.org/wcontractawards/procdetails/OP00006602,DAAC SystemIntegrator SRL,Evaluated,,,,USD,,,,,,
+P095250,http://search.worldbank.org/wcontractawards/procdetails/OP00006602,DAAC SystemIntegrator SRL,Evaluated,,USD,1778096.0,"USD 1,778,096.00;",,,,,,
 P096181,http://search.worldbank.org/wcontractawards/procdetails/OP00007000,ESR InternationalGmbH &,Awarded,,EUR,6958335.0,"EUR 6,958,335.30;",EUR,6958335.0,"EUR  6,958,335.30",EUR,6958335.0,"EUR  6,958,335.30"
 P075776,http://search.worldbank.org/wcontractawards/procdetails/OP00006400,(1)LA SOCIETE LABOSERVICES/(2),Awarded,,EUR,1737600.0,"EUR 1,737,600.00;  TND 656,627.20;",,,TND,TND,3865600.0,"TND  3,865,600.00"
 P075776,http://search.worldbank.org/wcontractawards/procdetails/OP00006400,Groupement Le FlochDepollution,Evaluated,,EUR,1712139.0,"EUR 1,712,139.00;  TND 921,877.10;",,,TND,,,
@@ -13439,9 +13439,9 @@ P093987,http://search.worldbank.org/wcontractawards/procdetails/OP00018776,CTEL,
 P093987,http://search.worldbank.org/wcontractawards/procdetails/OP00018768,CFAO MOTORS BURKINA,Awarded,Burkina Faso,XOF,213176740.0,"XOF 213,176,740.00",XOF,213176740.0,"XOF213,176,740.00",XOF,213176740.0,"XOF213,176,740.00"
 P093987,http://search.worldbank.org/wcontractawards/procdetails/OP00018768,MEGA TECH,Evaluated,Burkina Faso,XOF,212000000.0,"XOF 212,000,000.00",XOF,210000000.0,"XOF210,000,000.00",,,
 P073089,http://search.worldbank.org/wcontractawards/procdetails/OP00006279,Joh Achiles &,Awarded,,EUR,728595.0,"EUR 728,595.00;",JPY,104534280.0,"JPY  104,534,280.00",JPY,104534280.0,"JPY  104,534,280.00"
-P090309,http://search.worldbank.org/wcontractawards/procdetails/OP00007404,BATUHAN,Awarded,,RON,243080.0,"RON 243,080.54;",,,RON,,,RON
-P090309,http://search.worldbank.org/wcontractawards/procdetails/OP00007403,BATUHAN,Awarded,,RON,222276.0,"RON 222,276.74;",,,RON,,,RON
-P090309,http://search.worldbank.org/wcontractawards/procdetails/OP00007408,BATUHAN,Awarded,,RON,137933.0,"RON 137,933.50;",,,RON,,,RON
+P090309,http://search.worldbank.org/wcontractawards/procdetails/OP00007404,SC MIC MOBILIER,Awarded,,RON,319748.0,"RON 319,748.00;",,,RON,,,RON
+P090309,http://search.worldbank.org/wcontractawards/procdetails/OP00007403,SC MIC MOBILIER,Awarded,,RON,289567.0,"RON 289,567.00;",,,RON,,,RON
+P090309,http://search.worldbank.org/wcontractawards/procdetails/OP00007408,SC SILVAROM,Awarded,,RON,137933.0,"RON 137,933.50;",,,RON,,,RON
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00013167,Kuy Leang Ky Construction Trading Group Co. Ltd,Awarded,,USD,2431676.0,"USD 2,431,676.30",USD,2431676.0,"USD2,431,676.30",USD,2431676.0,"USD2,431,676.30"
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00013167,Lim Sarin Co. Ltd ? Sala Trading Co. Ltd (JV).,Evaluated,,USD,2499318.0,"USD 2,499,318.47",USD,2499318.0,"USD2,499,318.47",,,
 P106603,http://search.worldbank.org/wcontractawards/procdetails/OP00013167,Visvakam Samnang Construction Co. Ltd,Evaluated,,USD,2622980.0,"USD 2,622,980.96",USD,2622980.0,"USD2,622,980.96",,,
@@ -13607,17 +13607,17 @@ P113415,http://search.worldbank.org/wcontractawards/procdetails/OP00025867,VICO,
 P113415,http://search.worldbank.org/wcontractawards/procdetails/OP00025867,ENTTP,Evaluated,Togo,XOF,958887353.0,"XOF 958,887,353.00",XOF,969983362.0,"XOF969,983,362.00",,,
 P113415,http://search.worldbank.org/wcontractawards/procdetails/OP00025867,FKC,Evaluated,Togo,XOF,1337255400.0,"XOF 1,337,255,400.00",XOF,1136254860.0,"XOF1,136,254,860.00",,,
 P113415,http://search.worldbank.org/wcontractawards/procdetails/OP00025867,Groupement EEBTP/SONAF,Rejected,Togo,XOF,594783000.0,"XOF 594,783,000.00",,,,,,
-P082672,http://search.worldbank.org/wcontractawards/procdetails/OP00007245,Dong Luc Trading,Awarded,,USD,1196697.0,"USD 1,196,697.00;",,,VND,,,VND
+P082672,http://search.worldbank.org/wcontractawards/procdetails/OP00007245,Dong Luc Trading,Awarded,,USD,974316.0,"USD 974,316.00;",,,VND,,,VND
 P082672,http://search.worldbank.org/wcontractawards/procdetails/OP00007246,Binh Mai Co,Awarded,,EUR,176480.0,"EUR 176,480.20;  USD",,,VND,,,VND
-P082672,http://search.worldbank.org/wcontractawards/procdetails/OP00007256,Vietnam,Awarded,,USD,1028830.0,"USD 1,028,830.00;",VND,28256053395.0,"VND  28,256,053,395.00",VND,28256053395.0,"VND  28,256,053,395.00"
+P082672,http://search.worldbank.org/wcontractawards/procdetails/OP00007256,Vietnam,Awarded,,USD,1275335.0,"USD 1,275,335.00;",VND,28256053395.0,"VND  28,256,053,395.00",VND,28256053395.0,"VND  28,256,053,395.00"
 P082672,http://search.worldbank.org/wcontractawards/procdetails/OP00007350,Zhenzhen,Awarded,,USD,579934.0,"USD 579,934.00;",,,VND,,,VND
 P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006458,ESOTECH d.d.,Awarded,,EUR,2827107.0,"EUR 2,827,107.77;  MKD 5,529,342.19;",,,EUR,EUR,2912861.0,"EUR  2,912,861.51"
 P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006458,JV Nivo d.d. andEsot,Evaluated,,EUR,2768590.0,"EUR 2,768,590.52;  MKD 2,301,584.99;",,,EUR,,,
 P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00005833,Reweus d.o.o.Lukavac Bosnia and,Awarded,,BAM,1964778.0,"BAM 1,964,778.81;",,,BAM,BAM,1966436.0,"BAM  1,966,436.28"
-P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006924,Hidroinzeniringd.o.o.,Awarded,,BAM,3176261.0,"BAM 3,176,261.00;  EUR 2,609,764.00;",,,EUR,,,EUR
+P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006924,Engineering DobersekGmbH,Awarded,,BAM,3176261.0,"BAM 3,176,261.00;  EUR 2,609,764.00;",,,EUR,,,EUR
 P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006924,ESOTECH d.d.,Evaluated,,,,BAM,,,,,,
-P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006924,Angerlehner,Evaluated,,EUR,6477709.0,"EUR 6,477,709.96;",,,EUR,,,
-P101190,http://search.worldbank.org/wcontractawards/procdetails/OP00006877,Closed JSC#Grundolita#,Awarded,,BYR,15052364513.0,"BYR 15,052,364,513.00;",,,,,,BYR
+P090666,http://search.worldbank.org/wcontractawards/procdetails/OP00006924,Angerlehner,Evaluated,,BAM,364139.0,"BAM 364,139.67;  EUR 5,032,686.78;",,,EUR,,,
+P101190,http://search.worldbank.org/wcontractawards/procdetails/OP00006877,JSC #PozeminiaiDarbai#,Awarded,,BYR,15052364513.0,"BYR 15,052,364,513.00;",,,,,,BYR
 P095337,http://search.worldbank.org/wcontractawards/procdetails/OP00007600,"Limited LiabilityCompany ""DOKA""",Awarded,,UAH,19428058.0,"UAH 19,428,058.21;",UAH,28758327.0,"UAH28,758,327.20",UAH,19615515.0,"UAH19,615,515.71"
 P095337,http://search.worldbank.org/wcontractawards/procdetails/OP00007600,"Consortium ofLimited Liability Company ""Ekolog-Inzeneriya"" ""Ekolog-Spomasz"" Sp.o.o.and PIOS ""Ekoklar"" Sp.o.o.",Rejected,,EUR,610574.0,"EUR 610,574.00;",,,,,,
 P095337,http://search.worldbank.org/wcontractawards/procdetails/OP00007600,Limited LiabilityCompany MEGAPROM,Rejected,,UAH,19620360.0,"UAH 19,620,360.00;",,,,,,
@@ -13733,13 +13733,13 @@ P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006090,Chint
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006090,Shanghai ElectricGroup,Evaluated,,,,EUR,,,USD,,,
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006090,AngeliqueInternational,Evaluated,,USD,2969253.0,"USD 2,969,253.00;",,,,,,
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006090,UFUK ATAC,Evaluated,,USD,5552333.0,"USD 5,552,333.09;",,,USD,,,
-P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006089,Eleject - GeneralCompany for,Awarded,,USD,17911080.0,"USD 17,911,080.00;",,,USD,,,USD
+P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006089,AngeliqueInternational,Awarded,,USD,17911080.0,"USD 17,911,080.00;",,,USD,,,USD
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006089,Shanghai ElectricGroup,Evaluated,,,,EUR,,,USD,,,
-P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006089,Tbea ShandongLuneng Taishan And,Evaluated,,USD,26794609.0,"USD 26,794,609.77;",,,,,,
+P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006089,UFAK ATAC,Evaluated,,USD,45393110.0,"USD 45,393,110.00;",,,,,,
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006261,Chint Electric Co.Ltd.,Awarded,,,,USD,,,USD,USD,8056306.0,"USD  8,056,306.53"
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006261,ANGELIQUEINTERNATIONAL,Evaluated,,USD,10499511.0,"USD 10,499,511.00;",,,USD,,,
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006261,Shanghai ElectricGroup,Evaluated,,,,USD,,,USD,,,
-P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006261,UFUK ATAC,Evaluated,,CNY,57077372.0,"CNY 57,077,372.00;",,,USD,,,
+P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00006261,UFUK ATAC,Evaluated,,EUR,9605456.0,"EUR 9,605,456.00;  YER 259,854,597.00;",,,USD,,,
 P087910,http://search.worldbank.org/wcontractawards/procdetails/OP00015953,Bombas Ideal Company for General Contractors,Awarded,,USD,5511511.0,"USD 5,511,511.00",USD,5511511.0,"USD5,511,511.00",USD,4114770.0,"USD4,114,770.00"
 P087910,http://search.worldbank.org/wcontractawards/procdetails/OP00015953,KSP,Rejected,,USD,5291323.0,"USD 5,291,323.00",,,,,,
 P087910,http://search.worldbank.org/wcontractawards/procdetails/OP00015953,AL-AEAD AL-AHLIYA FOR GENERAL COTRACTS,Rejected,,USD,8586650.0,"USD 8,586,650.00",,,,,,
@@ -13772,10 +13772,10 @@ P086379,http://search.worldbank.org/wcontractawards/procdetails/OP00018610,TEC I
 P086379,http://search.worldbank.org/wcontractawards/procdetails/OP00018610,(1) IINMAA / (2) Global Corp. Enterprise,Rejected,Djibouti,USD,7499983.0,"USD 7,499,983.34",,,,,,
 P078971,http://search.worldbank.org/wcontractawards/procdetails/OP00006221,NIHON KOHDEN,Awarded,,EUR,775700.0,"EUR 775,700.00;",,,EUR,,,EUR
 P078971,http://search.worldbank.org/wcontractawards/procdetails/OP00006110,TEHNOPLUS,Awarded,,EUR,4046568.0,"EUR 4,046,568.00;",,,EUR,,,EUR
-P078971,http://search.worldbank.org/wcontractawards/procdetails/OP00006110,SIMED,Evaluated,,EUR,4446505.0,"EUR 4,446,505.00;",,,,,,
+P078971,http://search.worldbank.org/wcontractawards/procdetails/OP00006110,STERIS,Evaluated,,EUR,4446505.0,"EUR 4,446,505.00;",,,,,,
 P079275,http://search.worldbank.org/wcontractawards/procdetails/OP00006280,Securities andTrading Technology,Awarded,,USD,20000001.0,"USD 20,000,001.00;",,,,,,USD
 P079275,http://search.worldbank.org/wcontractawards/procdetails/OP00006290,Wavetech PrivateLimited,Awarded,,ETB,6000758.0,"ETB 6,000,758.34;  USD 6,763,658.99;",,,ETB,,,ETB
-P079275,http://search.worldbank.org/wcontractawards/procdetails/OP00006290,The Copy CatLimitted,Evaluated,,,,ETB,,,ETB,,,
+P079275,http://search.worldbank.org/wcontractawards/procdetails/OP00006290,The Copy CatLimitted,Evaluated,,USD,6458986.0,"USD 6,458,986.00;",,,ETB,,,
 P079275,http://search.worldbank.org/wcontractawards/procdetails/OP00006385,The,Awarded,,ETB,2000000.0,"ETB 2,000,000.00;  USD",ETB,66451623.0,"ETB  66,451,623.00",ETB,66451623.0,"ETB  66,451,623.00"
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00006923,CHINA,Awarded,,XOF,9905315834.0,"XOF 9,905,315,834.00;",,,,,,
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00006923,,Evaluated,,XOF,12918828950.0,"XOF 12,918,828,950.00;",,,XOF,,,
@@ -13787,7 +13787,7 @@ P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00006923,FADOU
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00006923,,Evaluated,,XOF,15627284747.0,"XOF 15,627,284,747.00;",,,,,,
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00006923,CGCC/MALI,Evaluated,,,,XOF,,,XOF,,,
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00006923,SOTRACOM,Evaluated,,,,XOF,,,XOF,,,
-P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00007026,SINOHYDRO,Awarded,,,,XOF,,,XOF,,,XOF
+P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00007026,SINOHYDRO,Awarded,,XOF,24448477120.0,"XOF 24,448,477,120.00;",,,XOF,,,XOF
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00007026,CGC,Evaluated,,,,XOF,,,XOF,,,
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00007026,SOGEA,Evaluated,,,,,,,XOF,,,
 P074525,http://search.worldbank.org/wcontractawards/procdetails/OP00007026,,Evaluated,,XOF,33740390033.0,"XOF 33,740,390,033.00;",,,,,,
@@ -13846,7 +13846,7 @@ P082916,http://search.worldbank.org/wcontractawards/procdetails/OP00008598,Maste
 P082916,http://search.worldbank.org/wcontractawards/procdetails/OP00008598,DAAC SystemIntegrator SRL,Evaluated,,USD,16492.0,"USD 16,492.00;",USD,16574.0,"USD16,574.46",,,
 P082916,http://search.worldbank.org/wcontractawards/procdetails/OP00008598,SC Omnicom SRL,Rejected,,USD,6802.0,"USD 6,802.00;",,,,,,
 P100580,http://search.worldbank.org/wcontractawards/procdetails/OP00007168,OJSC,Awarded,,UAH,67520307.0,"UAH 67,520,307.19;",,,,,,UAH
-P100580,http://search.worldbank.org/wcontractawards/procdetails/OP00007161,ONUR TaahhutTasimacilik ve Tic.,Awarded,,UAH,157966104.0,"UAH 157,966,104.10;",,,,,,UAH
+P100580,http://search.worldbank.org/wcontractawards/procdetails/OP00007161,OJSC,Awarded,,UAH,157966104.0,"UAH 157,966,104.10;",,,,,,UAH
 P100580,http://search.worldbank.org/wcontractawards/procdetails/OP00007161,ILK Insaat Taah.San. ve Tic.,Evaluated,,UAH,230921273.0,"UAH 230,921,273.77;",,,,,,
 P123044,http://search.worldbank.org/wcontractawards/procdetails/OP00011935,JSC Uchkun,Awarded,,USD,2089510.0,"USD 2,089,510.00",USD,2089510.0,"USD2,089,510.00",USD,2166731.0,"USD2,166,731.40"
 P123044,http://search.worldbank.org/wcontractawards/procdetails/OP00011935,Kirland Ltd,Evaluated,,USD,569256.0,"USD 569,256.00",USD,558095.0,"USD558,095.00",,,
@@ -14155,7 +14155,7 @@ P088663,http://search.worldbank.org/wcontractawards/procdetails/OP00032053,Medit
 P088663,http://search.worldbank.org/wcontractawards/procdetails/OP00032053,SK Tradeing d.o.o.,Evaluated,Bosnia and Herzegovina,BAM,1099800.0,"BAM 1,099,800.00",BAM,1099800.0,"BAM1,099,800.00",,,
 P102174,http://search.worldbank.org/wcontractawards/procdetails/OP00006202,JV NEOCOM &,Awarded,,EUR,109500.0,"EUR 109,500.00;",EUR,108000.0,"EUR  108,000.00",EUR,108000.0,"EUR  108,000.00"
 P102174,http://search.worldbank.org/wcontractawards/procdetails/OP00006202,BIT MEDIA,Evaluated,,EUR,200000.0,"EUR 200,000.00;",,,,,,
-P102174,http://search.worldbank.org/wcontractawards/procdetails/OP00006202,CSE,Evaluated,,EUR,81000.0,"EUR 81,000.00;",,,,,,
+P102174,http://search.worldbank.org/wcontractawards/procdetails/OP00006202,ASSECO,Evaluated,,EUR,81000.0,"EUR 81,000.00;",,,,,,
 P092618,http://search.worldbank.org/wcontractawards/procdetails/OP00017293,Liaoning Instrument Company Ltd. China,Awarded,,CNY,5430000.0,"CNY 5,430,000.00",CNY,5430000.0,"CNY5,430,000.00",CNY,5430000.0,"CNY5,430,000.00"
 P092618,http://search.worldbank.org/wcontractawards/procdetails/OP00017507,Liaoning Instrument Company Ltd.,Awarded,,CNY,1493200.0,"CNY 1,493,200.00",CNY,1493200.0,"CNY1,493,200.00",CNY,1493200.0,"CNY1,493,200.00"
 P092618,http://search.worldbank.org/wcontractawards/procdetails/OP00021435,Shenyang Shichuang Water Engineering Group Co. Ltd. China,Awarded,China,CNY,47978838.0,"CNY 47,978,838.10",CNY,47978838.0,"CNY47,978,838.10",CNY,47978838.0,"CNY47,978,838.10"
@@ -14184,7 +14184,7 @@ P035777,http://search.worldbank.org/wcontractawards/procdetails/OP00007173,Yug-C
 P096823,http://search.worldbank.org/wcontractawards/procdetails/OP00007380,Joint Venture -,Awarded,,,,,,,RSD,,,RSD
 P096823,http://search.worldbank.org/wcontractawards/procdetails/OP00007380,Informatika,Evaluated,,,,,,,RSD,,,
 P096823,http://search.worldbank.org/wcontractawards/procdetails/OP00007380,Joint Venture,Evaluated,,,,,,,RSD,,,
-P096823,http://search.worldbank.org/wcontractawards/procdetails/OP00007380,Joint Venture -,Evaluated,,EUR,4499867.0,"EUR 4,499,867.89;",,,RSD,,,
+P096823,http://search.worldbank.org/wcontractawards/procdetails/OP00007380,Joint Venture -,Evaluated,,EUR,5996599.0,"EUR 5,996,599.56;",,,RSD,,,
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00015205,Chint Electric Co. Ltd.,Awarded,,CNY,66113398.0,"CNY 66,113,398.14",USD,9817870.0,"USD9,817,870.63",USD,9817870.0,"USD9,817,870.63"
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00015205,Shandong Taikai Power Engineering Co.Ltd,Evaluated,,CNY,87302992.0,"CNY 87,302,992.37",USD,11000095.0,"USD11,000,095.33",,,
 P086865,http://search.worldbank.org/wcontractawards/procdetails/OP00015205,Angelique International Limited,Evaluated,,USD,13444816.0,"USD 13,444,816.00",USD,13442062.0,"USD13,442,062.00",,,
@@ -14236,7 +14236,7 @@ P104994,http://search.worldbank.org/wcontractawards/procdetails/OP00028918,Injen
 P104994,http://search.worldbank.org/wcontractawards/procdetails/OP00028918,JV,Evaluated,Kyrgyz Republic,KGS,73336097.0,"KGS 73,336,097.00",KGS,73336082.0,"KGS73,336,082.29",,,
 P104994,http://search.worldbank.org/wcontractawards/procdetails/OP00028918,JV,Rejected,Kyrgyz Republic,KGS,51544208.0,"KGS 51,544,208.00",,,,,,
 P104994,http://search.worldbank.org/wcontractawards/procdetails/OP00028918,"JV ?Yug-Stroiservice""",Rejected,Kyrgyz Republic,KGS,75914903.0,"KGS 75,914,903.30",,,,,,
-P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00006179,ZAO Lanit,Awarded,,USD,3724422.0,"USD 3,724,422.00;",,,RUB,,,RUB
+P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00006179,OOO IBS,Awarded,,RUB,82859951.0,"RUB 82,859,951.89;",,,RUB,,,RUB
 P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00006179,ZAO Firm IT.Information,Evaluated,,RUB,141966568.0,"RUB 141,966,568.46;",,,RUB,,,
 P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00006180,OOO Region Serviceand ZAO Group,Awarded,,USD,1899574.0,"USD 1,899,574.00;",,,RUB,RUB,33115868.0,"RUB  33,115,868.46"
 P089733,http://search.worldbank.org/wcontractawards/procdetails/OP00006178,ZAO,Awarded,,USD,8669072.0,"USD 8,669,072.00;",RUB,243329932.0,"RUB  243,329,932.04",RUB,285175637.0,"RUB  285,175,637.24"
@@ -14293,7 +14293,7 @@ P093767,http://search.worldbank.org/wcontractawards/procdetails/OP00012440,JV Cy
 P093767,http://search.worldbank.org/wcontractawards/procdetails/OP00022086,JV Muci? Co d.o.o. & Viadukt d.d. & GK Grupa d.o.o.,Awarded,Croatia,HRK,84433531.0,"HRK 84,433,531.60",HRK,84454878.0,"HRK84,454,878.81",HRK,84454878.0,"HRK84,454,878.81"
 P093767,http://search.worldbank.org/wcontractawards/procdetails/OP00022086,STRABAG d.o.o.,Evaluated,Croatia,HRK,91651756.0,"HRK 91,651,756.59",HRK,91651756.0,"HRK91,651,756.59",,,
 P115208,http://search.worldbank.org/wcontractawards/procdetails/OP00007075,FHC FarmaceuticaLda,Awarded,,EUR,228114.0,"EUR 228,114.30;",,,EUR,,,EUR
-P115208,http://search.worldbank.org/wcontractawards/procdetails/OP00007075,MPS,Evaluated,,,,EUR,,,EUR,,,
+P115208,http://search.worldbank.org/wcontractawards/procdetails/OP00007075,MPS,Evaluated,,,,,,,EUR,,,
 P110051,http://search.worldbank.org/wcontractawards/procdetails/OP00008980,M/s Crompton GreavesLimited,Awarded,,EUR,1524131.0,"EUR 1,524,131.00;INR 146,917,638.00;",INR,233874396.0,"INR233,874,396.56",INR,235770208.0,"INR235,770,208.56"
 P110051,http://search.worldbank.org/wcontractawards/procdetails/OP00008980,M/s Easun ProductIndia Ltd. Chennai in JV with Beijing BeikaiElectric Company China,Evaluated,,INR,308460580.0,"INR 308,460,580.00;",INR,308460580.0,"INR308,460,580.00",,,
 P110051,http://search.worldbank.org/wcontractawards/procdetails/OP00008980,M/s L&T LimitedChennai,Evaluated,,USD,2732599.0,"USD 2,732,599.00;INR 296,677,968.00;",INR,408246921.0,"INR408,246,921.00",,,
@@ -14747,7 +14747,7 @@ P078539,http://search.worldbank.org/wcontractawards/procdetails/OP00031502,M/s M
 P078539,http://search.worldbank.org/wcontractawards/procdetails/OP00031503,M/s Vital Health Care Pvt. Ltd.,Awarded,India,INR,303744695.0,"INR 303,744,695.32",INR,303744695.0,"INR303,744,695.32",INR,303744695.0,"INR303,744,695.32"
 P078539,http://search.worldbank.org/wcontractawards/procdetails/OP00031504,M/sN.K. Jain Instruments Pvt. Ltd.,Awarded,India,INR,118170000.0,"INR 118,170,000.00",INR,118170000.0,"INR118,170,000.00",INR,133585312.0,"INR133,585,312.00"
 P078539,http://search.worldbank.org/wcontractawards/procdetails/OP00031501,M/s Lupin Ltd.,Awarded,India,INR,75686338.0,"INR 75,686,338.00",INR,75686338.0,"INR75,686,338.00",INR,75686338.0,"INR75,686,338.00"
-P049892,http://search.worldbank.org/wcontractawards/procdetails/OP00006184,SINAM,Awarded,,,,USD,,,USD,USD,464584.0,"USD  464,584.00"
+P049892,http://search.worldbank.org/wcontractawards/procdetails/OP00006184,SINAM,Awarded,,USD,592110.0,"USD 592,110.00;",,,USD,USD,464584.0,"USD  464,584.00"
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006175,Alpha Nam,Awarded,,VND,18389000000.0,"VND 18,389,000,000.00;",,,VND,,,VND
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006175,Shanghai,Evaluated,,,,USD,,,VND,,,
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006175,Transformers,Evaluated,,USD,1148123.0,"USD 1,148,123.00;",,,,,,
@@ -14758,14 +14758,14 @@ P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006176,Alpha
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006176,Viet A,Evaluated,,USD,668986.0,"USD 668,986.61;",,,,,,
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006176,ENERBENSA,Evaluated,,USD,730461.0,"USD 730,461.10;",,,VND,,,
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006176,Energy,Evaluated,,EUR,6192.0,"EUR 6,192.00;",,,VND,,,
-P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006612,Applied TechnicalSystems,Awarded,,USD,369000.0,"USD 369,000.00;",,,,,,VND
+P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006612,Energy TechnologyCompany,Awarded,,USD,369000.0,"USD 369,000.00;",,,,,,VND
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006612,Gon ElectricalEquipment,Evaluated,,USD,452530.0,"USD 452,530.71;",,,,,,
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006612,LS-Vina IndustrialSystem,Evaluated,,,,,,,VND,,,
-P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006790,Consortium,Awarded,,,,USD,,,VND,,,VND
+P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006790,Comin Asia,Awarded,,,,USD,,,VND,,,VND
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006790,Consortium,Evaluated,,,,,,,VND,,,
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006790,Consortium,Evaluated,,USD,196715.0,"USD 196,715.00;",,,,,,
-P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006790,Viet A Group,Evaluated,,,,USD,,,VND,,,
-P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006858,Viet Vuong,Awarded,,VND,5158410782.0,"VND 5,158,410,782.00;",,,VND,,,VND
+P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006790,Viet A Group,Evaluated,,USD,239151.0,"USD 239,151.00;",,,VND,,,
+P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006858,Viet Vuong,Awarded,,,,VND,,,VND,,,VND
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00006959,Viet A Group,Awarded,,VND,3917350190.0,"VND 3,917,350,190.00;",,,VND,,,VND
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00007311,TAN CUONG,Awarded,,USD,545070.0,"USD 545,070.94;",USD,522995.0,"USD  522,995.56",USD,569599.0,"USD  569,599.13"
 P099211,http://search.worldbank.org/wcontractawards/procdetails/OP00007309,VIETNAM,Awarded,,USD,1187665.0,"USD 1,187,665.41;",USD,1080775.0,"USD  1,080,775.52",USD,1188853.0,"USD  1,188,853.07"
@@ -14989,7 +14989,7 @@ P107833,http://search.worldbank.org/wcontractawards/procdetails/OP00010859,PREST
 P065126,http://search.worldbank.org/wcontractawards/procdetails/OP00022595,GROUPEMENT MM ETS INT SARL/HUZHOU GAOURI WARP KNITTING INDUSTRIAL,Awarded,Guinea,GNF,5657500000.0,"GNF 5,657,500,000.00",GNF,5657500000.0,"GNF5,657,500,000.00",GNF,5868909235.0,"GNF5,868,909,235.00"
 P065126,http://search.worldbank.org/wcontractawards/procdetails/OP00022595,GROUPEMENT LABORATOIRE KABS-PALUTECH RELEVE,Evaluated,Canada,EUR,538200.0,"EUR 538,200.00",GNF,538200.0,"GNF538,200.00",,,
 P065126,http://search.worldbank.org/wcontractawards/procdetails/OP00022595,IPC TRAIDING COMPANY,Evaluated,United States,USD,661250.0,"USD 661,250.00",GNF,661250.0,"GNF661,250.00",,,
-P099201,http://search.worldbank.org/wcontractawards/procdetails/OP00006050,Afgan fitm,Awarded,,,,USD,,,USD,,,USD
+P099201,http://search.worldbank.org/wcontractawards/procdetails/OP00006050,Azer industrialconstruction,Awarded,,,,USD,,,USD,,,USD
 P077903,http://search.worldbank.org/wcontractawards/procdetails/OP00011219,Tan Prints India Pvt Ltd,Awarded,,USD,87648.0,"USD 87,648.47",USD,87648.0,"USD87,648.47",USD,87648.0,"USD87,648.47"
 P077903,http://search.worldbank.org/wcontractawards/procdetails/OP00011220,Lovely offset Printers Private Limited,Awarded,,USD,130196.0,"USD 130,196.71",USD,130196.0,"USD130,196.71",USD,130196.0,"USD130,196.71"
 P102778,http://search.worldbank.org/wcontractawards/procdetails/OP00022719,JV IBM,Awarded,Croatia,HRK,31292790.0,"HRK 31,292,790.91",HRK,31292790.0,"HRK31,292,790.91",HRK,39115988.0,"HRK39,115,988.64"
@@ -15046,7 +15046,7 @@ P096200,http://search.worldbank.org/wcontractawards/procdetails/OP00006156,BNPRO
 P096200,http://search.worldbank.org/wcontractawards/procdetails/OP00007055,BOSNIEN,Awarded,,,,EUR,,,EUR,EUR,222172.0,"EUR  222,172.00"
 P116410,http://search.worldbank.org/wcontractawards/procdetails/OP00007036,StefanuttiStocks-Luvuno Joint,Awarded,,ZAR,200185511.0,"ZAR 200,185,511.57;",,,ZAR,,,ZAR
 P116410,http://search.worldbank.org/wcontractawards/procdetails/OP00007047,Basil Read (Pty)Ltd,Awarded,,ZAR,569998895.0,"ZAR 569,998,895.68;",,,ZAR,,,ZAR
-P116410,http://search.worldbank.org/wcontractawards/procdetails/OP00007047,CMC di,Evaluated,,ZAR,533913310.0,"ZAR 533,913,310.23;",,,,,,
+P116410,http://search.worldbank.org/wcontractawards/procdetails/OP00007047,Stefanutti,Evaluated,,ZAR,533913310.0,"ZAR 533,913,310.23;",,,,,,
 P087620,http://search.worldbank.org/wcontractawards/procdetails/OP00020069,Fine LLC,Awarded,Armenia,AMD,276622350.0,"AMD 276,622,350.00",AMD,276622350.0,"AMD276,622,350.00",AMD,276622350.0,"AMD276,622,350.00"
 P087620,http://search.worldbank.org/wcontractawards/procdetails/OP00020069,Unicomp CJSC,Evaluated,Armenia,AMD,299168700.0,"AMD 299,168,700.00",AMD,299168700.0,"AMD299,168,700.00",,,
 P087620,http://search.worldbank.org/wcontractawards/procdetails/OP00020069,Vallex IT LLC,Rejected,Armenia,AMD,203620400.0,"AMD 203,620,400.00",,,,,,
@@ -15081,7 +15081,7 @@ P089566,http://search.worldbank.org/wcontractawards/procdetails/OP00031211,"Join
 P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007041,Inkom CJSC,Awarded,,UAH,35761949.0,"UAH 35,761,949.80;",,,UAH,UAH,33709301.0,"UAH  33,709,301.18"
 P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007039,Elegant TravelAgency Ltd,Awarded,,,,USD,,,UAH,,,UAH
 P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007059,Enran PrJSC  jointlywith  O.T.C.,Awarded,,UAH,8543537.0,"UAH 8,543,537.80;",,,UAH,,,UAH
-P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007059,JV #atuhanKonfeksiyon Tekstil,Evaluated,,,,USD,,,,,,
+P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007059,JV #atuhanKonfeksiyon Tekstil,Evaluated,,UAH,9449133.0,"UAH 9,449,133.70;",,,,,,
 P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007130,Enran PrJSC  jointlywith  O.T.C.,Awarded,,UAH,9449133.0,"UAH 9,449,133.70;",,,UAH,,,UAH
 P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00007130,JV #atuhanKonfeksiyon Tekstil,Evaluated,,,,USD,,,UAH,,,
 P075231,http://search.worldbank.org/wcontractawards/procdetails/OP00006829,Incom CJSC,Awarded,,,,USD,,,UAH,,,UAH
@@ -15294,7 +15294,7 @@ P087811,http://search.worldbank.org/wcontractawards/procdetails/OP00012444,Wiega
 P087811,http://search.worldbank.org/wcontractawards/procdetails/OP00012444,Labservis LTD.,Rejected,,EUR,145902.0,"EUR 145,902.00",,,,,,
 P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006691,ABB,Awarded,,EUR,1013767.0,"EUR 1,013,767.00;",EUR,1013767.0,"EUR  1,013,767.00",EUR,1013767.0,"EUR  1,013,767.00"
 P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006689,NEXANS,Awarded,,USD,1146766.0,"USD 1,146,766.50;",,,USD,USD,980374.0,"USD  980,374.36"
-P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006689,ETS KAMU,Evaluated,,USD,1302825.0,"USD 1,302,825.00;",,,USD,,,
+P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006689,ETS KAMU,Evaluated,,USD,1485195.0,"USD 1,485,195.00;",,,USD,,,
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00010251,Enerbensa SDN. BHD.,Awarded,,,,,VND,21849543068.0,"VND21,849,543,068.00",VND,21849543068.0,"VND21,849,543,068.00"
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00010251,Xian Electric Engineering Co. Ltd,Evaluated,,,,,VND,22489528952.0,"VND22,489,528,952.00",,,
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00010251,Consortium Comin Asia & Comin Vietnam,Evaluated,,,,,VND,24572749036.0,"VND24,572,749,036.00",,,
@@ -15318,7 +15318,7 @@ P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00011787,XIAN 
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00011789,Supply and Installation of Protection Control System Integrating and Measurement System Control Cables for 500kV O MonSubstation (Power,Awarded,,USD,1111870.0,"USD 1,111,870.00",USD,1130666.0,"USD1,130,666.75",USD,1207733.0,"USD1,207,733.43"
 P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006691,ABB,Awarded,,EUR,1013767.0,"EUR 1,013,767.00;",EUR,1013767.0,"EUR  1,013,767.00",EUR,1013767.0,"EUR  1,013,767.00"
 P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006689,NEXANS,Awarded,,USD,1146766.0,"USD 1,146,766.50;",,,USD,USD,980374.0,"USD  980,374.36"
-P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006689,ETS KAMU,Evaluated,,USD,1302825.0,"USD 1,302,825.00;",,,USD,,,
+P097201,http://search.worldbank.org/wcontractawards/procdetails/OP00006689,ETS KAMU,Evaluated,,USD,1485195.0,"USD 1,485,195.00;",,,USD,,,
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00010251,Enerbensa SDN. BHD.,Awarded,,,,,VND,21849543068.0,"VND21,849,543,068.00",VND,21849543068.0,"VND21,849,543,068.00"
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00010251,Xian Electric Engineering Co. Ltd,Evaluated,,,,,VND,22489528952.0,"VND22,489,528,952.00",,,
 P084871,http://search.worldbank.org/wcontractawards/procdetails/OP00010251,Consortium Comin Asia & Comin Vietnam,Evaluated,,,,,VND,24572749036.0,"VND24,572,749,036.00",,,
@@ -16589,7 +16589,7 @@ P001177,http://search.worldbank.org/wcontractawards/procdetails/OP00010553,CIDP,
 P001177,http://search.worldbank.org/wcontractawards/procdetails/OP00010553,SFCE,Rejected,,,,,,,,,,
 P001177,http://search.worldbank.org/wcontractawards/procdetails/OP00010553,AFRICAUTO,Rejected,,,,,,,,,,
 P001177,http://search.worldbank.org/wcontractawards/procdetails/OP00010553,EGCE BAT,Rejected,,,,,,,,,,
-P090492,http://search.worldbank.org/wcontractawards/procdetails/OP00006627,Eluplastic,Awarded,,,,RSD,,,RSD,,,RSD
+P090492,http://search.worldbank.org/wcontractawards/procdetails/OP00006627,Eluplastic,Awarded,,RSD,85277253.0,"RSD 85,277,253.11;",,,RSD,,,RSD
 P090492,http://search.worldbank.org/wcontractawards/procdetails/OP00006625,Zagorje Tehnobetond.d.,Awarded,,,,RSD,,,RSD,,,RSD
 P090492,http://search.worldbank.org/wcontractawards/procdetails/OP00006626,Expro d.o.o.,Awarded,,RSD,17224255.0,"RSD 17,224,255.00;",RSD,16690011.0,"RSD  16,690,011.83",RSD,16690011.0,"RSD  16,690,011.83"
 P090492,http://search.worldbank.org/wcontractawards/procdetails/OP00006626,JV Inter-Kop d.o.o.Sabac Serbia,Evaluated,,RSD,18663561.0,"RSD 18,663,561.31;",,,RSD,,,
