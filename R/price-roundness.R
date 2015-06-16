@@ -64,6 +64,6 @@ plot.bid.patterns <- function(bids) {
 #' @return Data frame of bids containing only the bids for which bid prices were identified and containing new "round.bids" and "total.bids" columns for the counts of round bids and of total bids
 #' @export
 roundness <- function(bids) {
-  contracts <- subset(round.numbers(bids),!is.na(round.bids) & total.bids > 1)
-  merge(bids, contracts[c('contract', 'contract.country', 'round.bids', 'total.bids')])
+  df <- subset(round.numbers(bids),!is.na(round.bids) & total.bids > 1)
+  merge(bids, df[c('contract.number', 'round.bids', 'total.bids')])
 }
