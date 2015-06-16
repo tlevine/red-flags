@@ -64,9 +64,10 @@ detect <- function() {
   contracts.rejections <- subset(merge(ddply(bids, 'contract.number', lowest.bidder),
                                        contracts, all.x = TRUE),
                                  n.rejected > 0)
+  total.bids <- rowSums(contracts.rejections[c('n.awarded', 'n.evaluated', 'n.rejected')])
   o <- order(contracts.rejections$contract.country == '',
              contracts.rejections$contract.country,
-             -contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
+             -contracts.rejections$n.rejected / total.bids)
   write.csv(contracts.rejections[o, c('contract.country', 'contract', 'n.evaluated', 'n.rejected')],
             'outputs/contracts-rejections.csv', row.names = FALSE)
 

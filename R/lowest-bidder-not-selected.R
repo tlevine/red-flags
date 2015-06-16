@@ -31,7 +31,7 @@ plot.contract <- function(contract) {
 #' @return A vector with the contract and statistics about bid selections
 #' @export
 lowest.bidder <- function(contract) {
-  if (all(!is.na(contract))) {
+  if (all(!is.na(contract[c('opening.price.amount', 'status')]))) {
     actual.order <- contract[order(contract$opening.price.amount),'status']
     lowest.bidder.order <- 1:nrow(contract)
     statuses <- as.numeric(table(contract$status))
