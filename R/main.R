@@ -44,38 +44,38 @@ detect <- function() {
   data(contracts)
 
   bids.valuechange <- change.in.contract.value(bids)
-  o <- order(is.na(bids.valuechange$country) | bids.valuechange$country == '',
-             bids.valuechange$country,
+  o <- order(is.na(bids.valuechange$bidder.country) | bids.valuechange$bidder.country == '',
+             bids.valuechange$bidder.country,
              -bids.valuechange$price.ratio)
-  write.csv(bids.valuechange[o,c('country', 'contract', 'price.ratio')],
+  write.csv(bids.valuechange[o,c('bidder.country', 'contract', 'price.ratio')],
             'outputs/bids-valuechange.csv', row.names = FALSE)
 
   # Roundness
-  bids.roundness <- roundness(bids)[c('country', 'contract', 'round.bids', 'total.bids')]
-  o <- order(bids.roundness$country == '',
-             bids.roundness$country,
+  bids.roundness <- roundness(bids)[c('bidder.country', 'contract', 'round.bids', 'total.bids')]
+  o <- order(bids.roundness$bidder.country == '',
+             bids.roundness$bidder.country,
              -(bids.roundness$round.bids/bids.roundness$total.bids))
   write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
-  contracts.countries <- sqldf('select contract_number AS \'contract.number\', country from bids group by contract_number')
+  contracts.countries <- sqldf('select contract_number as "contract.number", bidder_country as "bidder.country" from bids group by contract_number')
   contracts.rejections <- subset(merge(ddply(bids, 'contract.number', lowest.bidder),
                                        contracts.countries, all.x = TRUE),
                                  n.rejected > 0)
-  o <- order(contracts.rejections$country == '',
-             contracts.rejections$country,
+  o <- order(contracts.rejections$bidder.country == '',
+             contracts.rejections$bidder.country,
              -contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
-  write.csv(contracts.rejections[o, c('country', 'contract', 'n.evaluated', 'n.rejected')],
+  write.csv(contracts.rejections[o, c('bidder.country', 'contract', 'n.evaluated', 'n.rejected')],
             'outputs/contracts-rejections.csv', row.names = FALSE)
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
-  projects.countries <- sqldf('select project, country from bids group by project')
+  projects.countries <- sqldf('select project, contract_country AS "contract.country" from contracts group by project')
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
-  o <- order(is.na(projects.merged$country) | projects.merged$country == '',
-             projects.merged$country,
+  o <- order(is.na(projects.merged$contract.country) | projects.merged$contract.country == '',
+             projects.merged$contract.country,
              -projects.merged$kurt)
-  write.csv(projects.merged[o, c('country', 'project', 'ks.D', 'kurt')],
+  write.csv(projects.merged[o, c('contract.country', 'project', 'ks.D', 'kurt')],
             'outputs/project-prices.csv', row.names = FALSE)
 }
 
