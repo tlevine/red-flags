@@ -71,7 +71,7 @@ detect <- function() {
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
-  projects.countries <- sqldf('select project, contract_country AS "contract.country" from contracts group by project')
+  projects.countries <- sqldf('select project, [contract.country] from contracts group by project')
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
   o <- order(is.na(projects.merged$contract.country) | projects.merged$contract.country == '',
              projects.merged$contract.country,
