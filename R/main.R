@@ -43,29 +43,30 @@ detect <- function() {
   data(bids)
   data(contracts)
 
-  bids.valuechange <- change.in.contract.value(bids)
-  o <- order(is.na(bids.valuechange$bidder.country) | bids.valuechange$bidder.country == '',
-             bids.valuechange$bidder.country,
+  bids.valuechange <- merge(change.in.contract.value(bids),
+                            contracts[c('contract', 'contract.country')])
+  o <- order(is.na(bids.valuechange$contract.country) | bids.valuechange$contract.country == '',
+             bids.valuechange$contract.country,
              -bids.valuechange$price.ratio)
-  write.csv(bids.valuechange[o,c('bidder.country', 'contract', 'price.ratio')],
+  write.csv(bids.valuechange[o,c('contract.country', 'bidder.country', 'contract', 'price.ratio')],
             'outputs/bids-valuechange.csv', row.names = FALSE)
 
   # Roundness
-  bids.roundness <- roundness(bids)[c('bidder.country', 'contract', 'round.bids', 'total.bids')]
-  o <- order(bids.roundness$bidder.country == '',
-             bids.roundness$bidder.country,
+  bids.roundness <- roundness(bids)[c('contract.country', 'bidder.country',
+                                      'contract', 'round.bids', 'total.bids')]
+  o <- order(bids.roundness$contract.country == '',
+             bids.roundness$contract.country,
              -(bids.roundness$round.bids/bids.roundness$total.bids))
   write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
-  contracts.countries <- sqldf('select contract_number as "contract.number", bidder_country as "bidder.country" from bids group by contract_number')
   contracts.rejections <- subset(merge(ddply(bids, 'contract.number', lowest.bidder),
-                                       contracts.countries, all.x = TRUE),
+                                       contracts, all.x = TRUE),
                                  n.rejected > 0)
-  o <- order(contracts.rejections$bidder.country == '',
-             contracts.rejections$bidder.country,
+  o <- order(contracts.rejections$contract.country == '',
+             contracts.rejections$contract.country,
              -contracts.rejections$n.rejected / contracts.rejections$n.evaluated)
-  write.csv(contracts.rejections[o, c('bidder.country', 'contract', 'n.evaluated', 'n.rejected')],
+  write.csv(contracts.rejections[o, c('contract.country', 'contract', 'n.evaluated', 'n.rejected')],
             'outputs/contracts-rejections.csv', row.names = FALSE)
 
   # Contract pricing and generally strange price distributions
