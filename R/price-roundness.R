@@ -24,7 +24,7 @@ is.round <- function(n) {
 #' @return Data frame of contracts, with the columns "round.bids", "total.bids", and "main.currency".
 round.numbers <- function(bids) {
   bids$is.round <- is.round(bids$opening.price.amount)
-  ddply(bids, 'contract.number', function(df) {
+  ddply(bids, 'contract', function(df) {
     main.currency <- names(sort(table(df$opening.price.currency), decreasing = TRUE))[1]
     data.frame(round.bids = sum(df$is.round, na.rm = TRUE),
                total.bids = nrow(df),
