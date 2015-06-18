@@ -47,27 +47,26 @@ detect <- function() {
                             contracts[c('contract', 'contract.country')])
   o <- order(is.na(bids.valuechange$contract.country) | bids.valuechange$contract.country == '',
              bids.valuechange$contract.country,
-             -bids.valuechange$price.ratio)
-  write.csv(bids.valuechange[o,c('contract.country', 'bidder.country', 'contract', 'price.ratio')],
+             -bids.valuechange$suspiciousness.score)
+  columns <- c('contract.country', 'bidder.country', 'contract', 'suspiciousness.score', 'price.ratio')
+  write.csv(bids.valuechange[o,columns],
             'outputs/bids-valuechange.csv', row.names = FALSE)
 
   # Roundness
-  cols <- c('contract.country', 'contract', 'round.bids', 'total.bids')
+  cols <- c('contract.country', 'contract', 'suspiciousness.score', 'round.bids', 'total.bids')
   bids.roundness <- roundness(contracts, bids)[cols]
   o <- order(bids.roundness$contract.country == '',
              bids.roundness$contract.country,
-             -(bids.roundness$round.bids/bids.roundness$total.bids))
+             -(bids.roundness$suspiciousness.score))
   write.csv(bids.roundness[o,], 'outputs/bids-roundness.csv', row.names = FALSE)
 
   # Lowest bidder not selected
-  contracts.rejections <- subset(merge(ddply(bids, 'contract.number', lowest.bidder),
-                                       contracts, all.x = TRUE),
-                                 n.rejected > 0)
-  total.bids <- rowSums(contracts.rejections[c('n.awarded', 'n.evaluated', 'n.rejected')])
+  contracts.rejections <- high.rejections(bids, contracts)
   o <- order(contracts.rejections$contract.country == '',
              contracts.rejections$contract.country,
-             -contracts.rejections$n.rejected / total.bids)
-  write.csv(contracts.rejections[o, c('contract.country', 'contract', 'n.evaluated', 'n.rejected')],
+             -contracts.rejections$suspiciousness.score)
+  columns <- c('contract.country', 'contract', 'suspiciousness.score', 'n.evaluated', 'n.rejected')
+  write.csv(contracts.rejections[o, columns],
             'outputs/contracts-rejections.csv', row.names = FALSE)
 
   # Contract pricing and generally strange price distributions
@@ -75,8 +74,9 @@ detect <- function() {
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
   o <- order(is.na(projects.merged$contract.country) | projects.merged$contract.country == '',
              projects.merged$contract.country,
-             -projects.merged$kurt)
-  write.csv(projects.merged[o, c('contract.country', 'project', 'ks.D', 'kurt')],
+             -projects.merged$suspiciousness.score)
+  columns <- c('contract.country', 'project', 'suspiciousness.score', 'ks.D', 'kurt')
+  write.csv(projects.merged[o, columns],
             'outputs/project-prices.csv', row.names = FALSE)
 }
 

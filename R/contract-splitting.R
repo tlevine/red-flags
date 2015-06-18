@@ -32,11 +32,13 @@ strange.prices <- function(contracts) {
   contract.currencies <- ddply(contracts, c('project', 'price.currency'), standardize.prices)
   contract.currencies <- subset(contract.currencies, !is.na(price.standardized) & project != '')
   that.population <- contract.currencies$price.standardized
-  ddply(contract.currencies, 'project', function(df) {
+  df <- ddply(contract.currencies, 'project', function(df) {
     this.population <- df$price.standardized
     c(ks.D = unname(suppressWarnings(ks.test(this.population, that.population))$statistic),
       kurt = kurtosis(df$price.standardized))
   })
+  df$suspiciousness.score <- df$kurt
+  df
 }
 
 #' Plot a histogram of prices for a project.

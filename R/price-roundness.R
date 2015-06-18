@@ -65,5 +65,7 @@ plot.bid.patterns <- function(bids) {
 #' @export
 roundness <- function(contracts, bids) {
   df <- subset(round.numbers(bids),!is.na(round.bids) & total.bids > 1)
-  merge(contracts, df[c('contract', 'round.bids', 'total.bids')])
+  bids.roundness <- merge(contracts, df[c('contract', 'round.bids', 'total.bids')])
+  bids.roundness$suspiciousness.score <- bids.roundness$round.bids/bids.roundness$total.bids
+  bids.roundness
 }

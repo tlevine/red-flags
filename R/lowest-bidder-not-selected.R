@@ -48,8 +48,16 @@ lowest.bidder <- function(contract) {
   data.frame(contract = contract[1,'contract'],
              contract.number = contract[1,'contract.number'],
              features)
-             
 }
+high.rejections <- function(bids, contracts) {
+  df <- subset(merge(ddply(bids, 'contract.number', lowest.bidder),
+                           contracts, all.x = TRUE),
+               n.rejected > 0)
+  df$total.bids <- rowSums(df[c('n.awarded', 'n.evaluated', 'n.rejected')])
+  df$suspiciousness.score <- df$n.rejected / df$total.bids
+  df
+}
+
 
 #' Draw a plot about bid selections with a focus on detection low bidder non-selection
 #'
