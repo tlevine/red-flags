@@ -31,7 +31,10 @@ join.projects <- function(contracts.valuechange, contracts.roundness,
 
 model.projects <- function(projects.joined) {
   numbers <- c('valuechange', 'roundness', 'rejections', 'price.kurtosis')
-  df <- subset(projects.joined[numbers], valuechange < 5 & roundness > 0)
-  pca <- princomp(df, cor = TRUE)
-
+  df <- subset(projects.joined, valuechange < 5 & roundness > 0)
+  pca <- princomp(df[numbers], cor = TRUE)
+  df$principal.component <- pca$scores[,1]
+  if (all(pca$loadings[,1] < 0)) 
+    df$principal.component <- -df$principal.component
+  df[order(-df$principal.component),]
 }
