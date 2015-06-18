@@ -79,6 +79,8 @@ detect <- function() {
   columns <- c('contract.country', 'project', 'suspiciousness.score', 'ks.D', 'kurt')
   write.csv(projects.merged[o, columns],
             'outputs/project-prices.csv', row.names = FALSE)
+
+  list(bids.valuechange, bids.roundness, contracts.rejections, projects.merged)
 }
 
 # ggsave(filename = 'outputs/bid-patterns.pdf', plot = plot.bid.patterns(bids),
