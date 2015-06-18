@@ -1,7 +1,8 @@
 #' The first half of each argument is the statistical unit.
 #' columns <- c('contract.country', 'contract', 'suspiciousness.score')
-combine.contracts <- function(contracts.valuechange, contracts.roundness,
-                              contracts.rejections, projects.prices) {
+join.contracts <- function(contracts.valuechange,
+                              contracts.roundness,
+                              contracts.rejections) {
   data(contracts)
   contract.level <- list(valuechange = contracts.valuechange,
                          roundness = contracts.roundness,
@@ -15,9 +16,13 @@ combine.contracts <- function(contracts.valuechange, contracts.roundness,
   df
 }
 
-combine.projects <- function(contracts.valuechange, contracts.roundness,
+join.projects <- function(contracts.valuechange, contracts.roundness,
                              contracts.rejections, projects.prices) {
-  df <- combine.contracts(contracts.valuechange, contracts.roundness,
-                          contracts.rejections, projects.prices)
-
+  contract.flags <- join.contracts(contracts.valuechange,
+                                   contracts.roundness,
+                                   contracts.rejections)
+  f <- function(df)
+    sapply(df[c('valuechange', 'roundness', 'rejections')], max)
+  project.flags <- ddply(contract.flags, 'project', f)
+  merge(project.flags, projects.prices[c('project', 'suspiciousness.score')])
 }
