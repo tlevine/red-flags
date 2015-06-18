@@ -31,5 +31,7 @@ join.projects <- function(contracts.valuechange, contracts.roundness,
 
 model.projects <- function(projects.joined) {
   numbers <- c('valuechange', 'roundness', 'rejections', 'price.kurtosis')
-  df <- projects.joined[numbers]
+  df <- subset(projects.joined[numbers], valuechange < 5 & roundness > 0)
+  pca <- princomp(df, cor = TRUE)
+
 }
