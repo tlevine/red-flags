@@ -26,7 +26,7 @@ join.projects <- function(contracts.valuechange, contracts.roundness,
     sapply(df[c('valuechange', 'roundness', 'rejections')], max)
   project.flags <- ddply(contract.flags, 'project', f)
   projects.prices$price.kurtosis <- projects.prices$suspiciousness.score
-  merge(project.flags, projects.prices[c('project', 'price.kurtosis')])
+  merge(projects.prices[c('contract.country', 'project', 'price.kurtosis')], project.flags)
 }
 
 model.projects <- function(projects.joined) {
