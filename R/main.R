@@ -71,7 +71,7 @@ detect <- function() {
 
   # Contract pricing and generally strange price distributions
   projects.prices <- strange.prices(contracts)
-  projects.countries <- sqldf('select project, contract_country as "contract.country" from contracts group by project')
+  projects.countries <- sqldf('select project, "contract.country" from contracts group by project')
   projects.merged <- merge(projects.prices, projects.countries, all.x = TRUE)
   o <- order(is.na(projects.merged$contract.country) | projects.merged$contract.country == '',
              projects.merged$contract.country,
@@ -79,6 +79,12 @@ detect <- function() {
   columns <- c('contract.country', 'project', 'suspiciousness.score', 'ks.D', 'kurt')
   write.csv(projects.merged[o, columns],
             'outputs/project-prices.csv', row.names = FALSE)
+
+
+# contracts.joined <- join.contracts(contracts.valuechange, contracts.roundness,
+#                                    contracts.rejections)
+# projects.joined <- join.projects(contracts.valuechange, contracts.roundness,
+#                                  contracts.rejections, projects.prices)
 
   list(bids.valuechange, bids.roundness, contracts.rejections, projects.merged)
 }
