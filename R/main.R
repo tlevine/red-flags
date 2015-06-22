@@ -81,10 +81,10 @@ detect <- function() {
             'outputs/project-prices.csv', row.names = FALSE)
 
 
-  contracts.joined <- join.contracts(contracts.valuechange, contracts.roundness,
+  contracts.joined <- join.contracts(bids.valuechange, bids.roundness,
                                      contracts.rejections)
-  projects.joined <- join.projects(contracts.valuechange, contracts.roundness,
-                                   contracts.rejections, projects.prices)
+  projects.joined <- join.projects(bids.valuechange, bids.roundness,
+                                   contracts.rejections, projects.merged)
 
   pdf('outputs/models.pdf', width = 8.5, height = 11)
   write.csv(model.contracts(contracts.joined),
