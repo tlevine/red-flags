@@ -81,12 +81,17 @@ detect <- function() {
             'outputs/project-prices.csv', row.names = FALSE)
 
 
-# contracts.joined <- join.contracts(contracts.valuechange, contracts.roundness,
-#                                    contracts.rejections)
-# projects.joined <- join.projects(contracts.valuechange, contracts.roundness,
-#                                  contracts.rejections, projects.prices)
+  contracts.joined <- join.contracts(contracts.valuechange, contracts.roundness,
+                                     contracts.rejections)
+  projects.joined <- join.projects(contracts.valuechange, contracts.roundness,
+                                   contracts.rejections, projects.prices)
 
-  list(bids.valuechange, bids.roundness, contracts.rejections, projects.merged)
+  pdf('outputs/models.pdf', width = 8.5, height = 11)
+  write.csv(model.contracts(contracts.joined),
+            'outputs/model-contracts.csv', row.names = FALSE)
+  write.csv(model.projects(projects.joined),
+            'outputs/model-projects.csv', row.names = FALSE)
+  dev.off()
 }
 
 # ggsave(filename = 'outputs/bid-patterns.pdf', plot = plot.bid.patterns(bids),
